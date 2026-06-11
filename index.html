@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peach | Theerapong Thanarodpaibun</title>
+    <title>THEERAPONG THANARODPAIBUN | Inventory & Planning Specialist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -14,10 +14,10 @@
                 extend: {
                     colors: {
                         dark: '#0a0a0a',
-                        glass: 'rgba(255, 255, 255, 0.03)',
-                        primary: '#3b82f6',
-                        secondary: '#8b5cf6',
-                        indigo: '#6366f1',
+                        surface: '#121212',
+                        accent: '#3b82f6',
+                        muted: '#666666',
+                        border: 'rgba(255, 255, 255, 0.1)',
                     },
                     fontFamily: {
                         sans: ['Plus Jakarta Sans', 'Kanit', 'sans-serif'],
@@ -29,341 +29,293 @@
     <style>
         body {
             background-color: #0a0a0a;
-            color: #ffffff;
-            overflow-x: hidden;
+            color: #e5e5e5;
+            -webkit-font-smoothing: antialiased;
         }
-        .glow-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.08), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.05), transparent 40%);
         }
-        .glow-1 {
-            position: absolute;
-            top: -10%;
-            right: -10%;
-            width: 50vw;
-            height: 50vw;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
-            filter: blur(80px);
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.1), transparent);
         }
-        .glow-2 {
-            position: absolute;
-            bottom: -10%;
-            left: -10%;
-            width: 60vw;
-            height: 60vw;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
-            filter: blur(100px);
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
+        .project-card:hover {
+            border-color: rgba(59, 130, 246, 0.4);
+            transform: translateY(-4px);
         }
-        .glass-card:hover {
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background: rgba(255, 255, 255, 0.05);
-            transform: translateY(-5px);
-        }
-        .text-gradient {
-            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #6366f1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .nav-link {
-            position: relative;
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
-        }
-        .nav-link:hover {
-            opacity: 1;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #3b82f6;
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        ::-webkit-scrollbar {
+        .timeline-dot {
             width: 8px;
+            height: 8px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+            position: absolute;
+            left: -4px;
+            top: 8px;
         }
-        ::-webkit-scrollbar-track {
-            background: #0a0a0a;
+        .image-overlay {
+            background: linear-gradient(to bottom, transparent, rgba(10, 10, 10, 0.8));
         }
-        ::-webkit-scrollbar-thumb {
-            background: #222;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #333;
-        }
-        section {
-            padding: 100px 0;
-        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
     </style>
 </head>
-<body class="font-sans">
-    <div class="glow-bg">
-        <div class="glow-1"></div>
-        <div class="glow-2"></div>
+<body class="font-sans selection:bg-accent/30">
+    <div class="hero-gradient min-h-screen">
+        <!-- Navigation -->
+        <nav class="max-w-6xl mx-auto px-8 py-10 flex justify-between items-center">
+            <div class="text-xs font-bold tracking-[0.3em] uppercase">TT</div>
+            <div class="hidden md:flex gap-10 text-[11px] font-bold uppercase tracking-widest text-muted">
+                <a href="#about" class="hover:text-white transition-colors">Summary</a>
+                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                <a href="mailto:Theerapong.thana@outlook.com" class="hover:text-white transition-colors">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="max-w-6xl mx-auto px-8 pt-20 pb-32">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-white mb-6 leading-none">
+                        THEERAPONG<br>THANARODPAIBUN
+                    </h1>
+                    <p class="text-lg md:text-xl text-accent font-medium mb-8 tracking-tight">
+                        Inventory & Planning Specialist | Excel Automation | Warehouse Operations
+                    </p>
+                    <div class="flex flex-wrap gap-x-8 gap-y-3 text-sm text-muted font-medium uppercase tracking-wider mb-10">
+                        <a href="mailto:Theerapong.thana@outlook.com" class="hover:text-white transition-colors">Theerapong.thana@outlook.com</a>
+                        <span>+66 80 831 4717</span>
+                        <span>Bangkok, Thailand</span>
+                    </div>
+                </div>
+                <div class="relative h-[400px] rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop" alt="Data Infrastructure" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 image-overlay"></div>
+                </div>
+            </div>
+        </header>
     </div>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center backdrop-blur-md bg-dark/50">
-        <div class="text-xl font-bold tracking-tighter">PEICHH<span class="text-primary">.</span></div>
-        <div class="flex gap-8 text-sm font-medium">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#experience" class="nav-link">Experience</a>
-        </div>
-    </nav>
-
-    <main class="max-w-6xl mx-auto px-6">
-        <!-- Hero Section -->
-        <section class="min-h-screen flex flex-col justify-center items-start pt-20">
-            <div class="inline-block px-4 py-1.5 mb-6 glass-card rounded-full text-xs font-semibold tracking-widest uppercase text-blue-400">
-                Logistics Specialist & Creative Developer
-            </div>
-            <h1 class="text-6xl md:text-8xl font-extrabold mb-6 tracking-tight leading-none">
-                Theerapong <br>
-                <span class="text-gradient">Thanarodpaibun</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-white/60 max-w-2xl leading-relaxed mb-8">
-                I bridge the gap between complex supply chain operations and modern digital solutions. Based in Thailand, I specialize in logistics planning and building custom tools to automate manual workflows.
-            </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="#projects" class="px-8 py-4 bg-white text-dark font-bold rounded-xl hover:bg-white/90 transition-colors">View My Work</a>
-                <a href="#about" class="px-8 py-4 glass-card font-bold rounded-xl">About Me</a>
+    <main class="max-w-6xl mx-auto px-8 pb-32">
+        <!-- Summary Section -->
+        <section id="about" class="mb-32">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-4">
+                    <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-accent">Professional Summary</h2>
+                </div>
+                <div class="lg:col-span-8">
+                    <p class="text-2xl text-white/90 leading-relaxed font-light">
+                        Data-driven warehouse and planning professional with experience in IT server spare parts control, inventory reporting, demand planning, and capacity planning. Skilled in Microsoft Excel (Advanced), Power Query, Excel VBA, and basic SQL to automate reports and improve operational visibility. 
+                    </p>
+                    <p class="mt-6 text-muted leading-relaxed">
+                        Proven success in reducing reporting time from 2 days to 1 hour and improving warehouse efficiency through data-based location planning. Seeking to grow in inventory planning, operations analysis, or data analytics roles.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-4xl font-bold mb-8 flex items-center gap-4">
-                    <span class="w-12 h-1px bg-primary inline-block"></span>
-                    About Me
-                </h2>
-                <div class="space-y-6 text-white/70 leading-relaxed text-lg">
-                    <p>
-                        My professional foundation is built on logistics and operational excellence. I hold a <span class="text-white">Bachelor of Logistics and Supply Chain Management with First Class Honours</span> from Dhurakij Pundit University.
-                    </p>
-                    <p>
-                        My career began at <span class="text-white">Hanesbrands</span>, where I focused on Capacity and Demand Planning. I’ve since moved to <span class="text-white">Titanicom Tech</span> as a Warehouse Specialist. Throughout my journey, I’ve developed a knack for identifying inefficiencies and replacing tedious manual tasks with automated, data-driven systems.
-                    </p>
-                    <p>
-                        Driven by curiosity, I taught myself <span class="text-white">HTML, CSS, JavaScript, and SQL</span>. These skills allowed me to build practical tools like <span class="text-primary">ShopThip</span> and <span class="text-primary">Moo Pak Zap</span>, turning conceptual ideas into functional digital experiences.
-                    </p>
-                    <div class="pt-4">
-                        <h3 class="text-sm font-bold uppercase tracking-widest text-white/40 mb-4">Core Skills</h3>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 glass-card rounded-lg text-sm border-white/10">Logistics Planning</span>
-                            <span class="px-4 py-2 glass-card rounded-lg text-sm border-white/10">Inventory Management</span>
-                            <span class="px-4 py-2 glass-card rounded-lg text-sm border-white/10">SQL & Data Analysis</span>
-                            <span class="px-4 py-2 glass-card rounded-lg text-sm border-white/10">Power Query</span>
-                            <span class="px-4 py-2 glass-card rounded-lg text-sm border-white/10">Frontend (HTML/CSS/JS)</span>
-                            <span class="px-4 py-2 glass-card rounded-lg text-sm border-white/10">Workflow Automation</span>
-                        </div>
-                    </div>
+        <!-- Skills Section -->
+        <section class="mb-32">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 border-t border-white/5 pt-16">
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-6">Data Automation</h3>
+                    <ul class="text-sm space-y-3 text-muted font-medium">
+                        <li>Microsoft Excel (Advanced)</li>
+                        <li>Power Query / VBA</li>
+                        <li>Basic SQL</li>
+                        <li>Dashboard Reporting</li>
+                        <li>KPI Tracking</li>
+                    </ul>
                 </div>
-            </div>
-            <div class="relative group">
-                <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-                <div class="relative glass-card p-10 rounded-2xl flex flex-col justify-center">
-                    <h3 class="text-sm font-bold uppercase tracking-widest text-white/40 mb-6">Beyond the Office</h3>
-                    <ul class="space-y-6">
-                        <li class="flex items-start gap-4">
-                            <span class="text-2xl">💻</span>
-                            <div>
-                                <h4 class="font-bold text-white">The Setup</h4>
-                                <p class="text-sm text-white/50">Coding on a MacBook Air Midnight.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <span class="text-2xl">🛵</span>
-                            <div>
-                                <h4 class="font-bold text-white">Daily Commute</h4>
-                                <p class="text-sm text-white/50">Grab Bike enthusiast navigating Thailand's roads.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <span class="text-2xl">🐈</span>
-                            <div>
-                                <h4 class="font-bold text-white">The Managers</h4>
-                                <p class="text-sm text-white/50">Sharing space with 3 cats who run the household.</p>
-                            </div>
-                        </li>
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-6">Planning & Analytics</h3>
+                    <ul class="text-sm space-y-3 text-muted font-medium">
+                        <li>Capacity & Demand Planning</li>
+                        <li>Inventory Optimization</li>
+                        <li>Sales Trend Forecasting</li>
+                        <li>Root Cause Analysis (RCA)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-6">Operations</h3>
+                    <ul class="text-sm space-y-3 text-muted font-medium">
+                        <li>Warehouse Management</li>
+                        <li>IT Server Spare Parts Control</li>
+                        <li>FIFO / Stock Counting</li>
+                        <li>Reconciliation</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-6">Systems</h3>
+                    <ul class="text-sm space-y-3 text-muted font-medium">
+                        <li>Microsoft Dynamics NAV</li>
+                        <li>Inventory Records</li>
+                        <li>Process Standardization</li>
+                        <li>Workflow Improvement</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2 class="text-4xl font-bold mb-12 flex items-center gap-4">
-                <span class="w-12 h-1px bg-secondary inline-block"></span>
-                Selected Projects
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- ShopThip -->
-                <div class="glass-card rounded-3xl p-8 group">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center text-3xl">🛍️</div>
-                        <a href="https://peichh.github.io/shopthip-site/" target="_blank" class="w-10 h-10 glass-card rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                        </a>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">ShopThip (ช็อปทิพย์)</h3>
-                    <p class="text-white/60 mb-6 leading-relaxed">
-                        A simulated shopping platform designed to explore user interface patterns and frontend interactivity.
-                    </p>
-                    <div class="flex gap-2">
-                        <span class="text-xs font-bold px-3 py-1 bg-white/5 rounded-full uppercase tracking-widest text-white/40">Frontend Dev</span>
-                        <span class="text-xs font-bold px-3 py-1 bg-white/5 rounded-full uppercase tracking-widest text-white/40">UX Design</span>
-                    </div>
-                </div>
-
-                <!-- Moo Pak Zap -->
-                <div class="glass-card rounded-3xl p-8 group">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-14 h-14 bg-purple-500/20 rounded-2xl flex items-center justify-center text-3xl">🔮</div>
-                        <a href="https://poke.com/r/k0bZXR5tyJw" target="_blank" class="w-10 h-10 glass-card rounded-full flex items-center justify-center hover:bg-secondary transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                        </a>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3 group-hover:text-secondary transition-colors">Moo Pak Zap (มูปากแซ่บ)</h3>
-                    <p class="text-white/60 mb-6 leading-relaxed">
-                        An interactive Thai horoscope tool that delivers daily insights with a sharp, modern personality.
-                    </p>
-                    <div class="flex gap-2">
-                        <span class="text-xs font-bold px-3 py-1 bg-white/5 rounded-full uppercase tracking-widest text-white/40">Poke Recipe</span>
-                        <span class="text-xs font-bold px-3 py-1 bg-white/5 rounded-full uppercase tracking-widest text-white/40">Interactive Content</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Experience Section -->
-        <section id="experience">
-            <h2 class="text-4xl font-bold mb-12 flex items-center gap-4">
-                <span class="w-12 h-1px bg-indigo inline-block"></span>
-                Professional Journey
-            </h2>
+        <section id="experience" class="mb-32">
+            <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-accent mb-16">Work Experience</h2>
             
-            <!-- Current Role -->
-            <div class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden mb-8">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-indigo/5 blur-3xl rounded-full -mr-32 -mt-32"></div>
-                
-                <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 pb-8 border-b border-white/5 gap-4">
-                    <div>
-                        <h3 class="text-2xl font-bold">Warehouse Specialist / Inventory & Planning Specialist</h3>
-                        <p class="text-indigo/80 font-medium">Titanicom Tech (Thailand) Co., Ltd.</p>
+            <div class="space-y-20">
+                <!-- Current -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 relative pl-8 border-l border-white/10">
+                    <div class="timeline-dot"></div>
+                    <div class="lg:col-span-4">
+                        <span class="text-sm font-bold text-white/40 uppercase tracking-widest">Mar 2026 - Present</span>
+                        <h3 class="text-xl font-bold text-white mt-2">Titanicom Tech (Thailand)</h3>
                     </div>
-                    <div class="text-right">
-                        <p class="text-sm font-bold uppercase tracking-widest text-white/30">On Nut 17 (อ่อนนุช 17)</p>
-                        <p class="text-white/60">Present</p>
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <h4 class="text-sm font-bold uppercase tracking-widest text-white/40 mb-4">Core Focus</h4>
-                        <ul class="space-y-4 text-white/70">
-                            <li class="flex gap-3">
-                                <span class="text-indigo">▸</span>
-                                Managing inventory verification and supply chain planning for high-volume operations.
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="text-indigo">▸</span>
-                                <span class="text-white font-semibold">Achievement:</span> Reduced a 2-day manual reporting cycle to just 1 hour via automation.
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="text-indigo">▸</span>
-                                Leveraging SQL and Power Query for root cause analysis and operational improvements.
-                            </li>
+                    <div class="lg:col-span-8">
+                        <h4 class="text-lg font-bold text-accent mb-4">Warehouse Specialist (On Nut 17)</h4>
+                        <ul class="space-y-4 text-muted leading-relaxed">
+                            <li>• Lead inventory control for IT server spare parts with high precision and reporting accuracy.</li>
+                            <li>• Developing custom Excel automation tools to streamline reporting and audit trails.</li>
+                            <li>• Optimizing warehouse layout and location management for improved picking speed.</li>
                         </ul>
                     </div>
-                    <div class="bg-white/5 rounded-2xl p-6">
-                        <h4 class="text-sm font-bold uppercase tracking-widest text-white/40 mb-4">Operational Impact</h4>
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between text-xs font-bold uppercase mb-2">
-                                    <span>Reporting Efficiency</span>
-                                    <span>98% Faster</span>
-                                </div>
-                                <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
-                                    <div class="w-[98%] h-full bg-indigo"></div>
-                                </div>
-                            </div>
-                            <p class="text-xs text-white/40 italic mt-4">Transformed 48 hours of manual data entry into a streamlined 60-minute automated process.</p>
-                        </div>
+                </div>
+
+                <!-- Hanes 1 -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 relative pl-8 border-l border-white/10">
+                    <div class="timeline-dot bg-muted"></div>
+                    <div class="lg:col-span-4">
+                        <span class="text-sm font-bold text-white/40 uppercase tracking-widest">Feb 2025 - Feb 2026</span>
+                        <h3 class="text-xl font-bold text-white mt-2">Hanesbrands ROH Asia Ltd.</h3>
+                    </div>
+                    <div class="lg:col-span-8">
+                        <h4 class="text-lg font-bold text-white mb-4">Capacity Planner</h4>
+                        <ul class="space-y-4 text-muted leading-relaxed">
+                            <li>• Managed regional production capacity planning and supplier scheduling.</li>
+                            <li>• Reduced reporting cycle time from 2 days to 1 hour through advanced Power Query automation.</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
 
-            <!-- Past Roles -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="glass-card rounded-3xl p-8">
-                    <p class="text-sm font-bold uppercase tracking-widest text-indigo/60 mb-2">Past Experience</p>
-                    <h3 class="text-xl font-bold mb-1">Capacity & Demand Planner</h3>
-                    <p class="text-white/60 text-sm mb-4">Hanesbrands ROH Asia Ltd.</p>
-                    <p class="text-white/40 text-sm">Managed demand forecasting and regional capacity requirements to ensure operational continuity.</p>
+                <!-- Hanes 2 -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 relative pl-8 border-l border-white/10">
+                    <div class="timeline-dot bg-muted"></div>
+                    <div class="lg:col-span-4">
+                        <span class="text-sm font-bold text-white/40 uppercase tracking-widest">Jun 2024 - Dec 2024</span>
+                        <h3 class="text-xl font-bold text-white mt-2">Hanesbrands ROH Asia Ltd.</h3>
+                    </div>
+                    <div class="lg:col-span-8">
+                        <h4 class="text-lg font-bold text-white mb-4">Demand Planner</h4>
+                        <ul class="space-y-4 text-muted leading-relaxed">
+                            <li>• Analyzed sales trends and historical data to forecast product demand across regional markets.</li>
+                            <li>• Collaborated with cross-functional teams to align inventory levels with market needs.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="glass-card rounded-3xl p-8 border-l-4 border-indigo/30">
-                    <p class="text-sm font-bold uppercase tracking-widest text-indigo/60 mb-2">Education</p>
-                    <h3 class="text-xl font-bold mb-1">B.Logistics & Supply Chain Management</h3>
-                    <p class="text-white/60 text-sm mb-4">Dhurakij Pundit University</p>
-                    <p class="text-white/70 font-semibold text-sm">First Class Honours</p>
+
+                <!-- Maguro -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 relative pl-8 border-l border-white/10">
+                    <div class="timeline-dot bg-muted"></div>
+                    <div class="lg:col-span-4">
+                        <span class="text-sm font-bold text-white/40 uppercase tracking-widest">Aug 2023 - May 2024</span>
+                        <h3 class="text-xl font-bold text-white mt-2">Maguro Group PCL.</h3>
+                    </div>
+                    <div class="lg:col-span-8">
+                        <h4 class="text-lg font-bold text-white mb-4">Warehouse Internship</h4>
+                        <ul class="space-y-4 text-muted leading-relaxed">
+                            <li>• Assisted in daily warehouse operations, stock reconciliation, and FIFO enforcement.</li>
+                            <li>• Supported the implementation of standardized inventory recording processes.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="text-center py-20">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-8 tracking-tight">Let's connect for <span class="text-gradient">efficiency</span>.</h2>
-            <p class="text-white/60 max-w-xl mx-auto mb-10 leading-relaxed">
-                I'm always open to discussing logistics strategy, frontend development, or potential collaborations.
-            </p>
-            <a href="mailto:peach@poke.com" class="inline-flex items-center gap-3 px-8 py-4 glass-card rounded-2xl hover:border-primary/50 transition-all group">
-                <span class="text-xl font-bold group-hover:text-primary transition-colors">peach@poke.com</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            </a>
+        <!-- Education Section -->
+        <section class="mb-32">
+            <div class="bg-surface p-12 rounded-2xl border border-white/5">
+                <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-accent mb-8">Education</h2>
+                <div class="flex flex-col md:flex-row justify-between items-start gap-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">B.Logistics and Supply Chain Management</h3>
+                        <p class="text-muted mt-1">Dhurakij Pundit University | CIBA</p>
+                        <p class="text-accent font-bold mt-2">First Class Honours (เกียรตินิยมอันดับ 1) | GPA: 3.51</p>
+                    </div>
+                    <div class="text-sm font-bold text-white/40 uppercase tracking-widest">2020 - 2024</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-32">
+            <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-accent mb-12">Selected Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-surface rounded-2xl border border-white/5 overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" alt="Excel Automation">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-lg font-bold text-white mb-2">Excel Automation Tool</h3>
+                        <p class="text-sm text-muted leading-relaxed">Custom VBA solution designed to consolidate disparate data sources into a single, actionable dashboard.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <a href="https://peichh.github.io/shopthip-site/" target="_blank" class="project-card bg-surface rounded-2xl border border-white/5 overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" alt="ShopThip">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-lg font-bold text-white mb-2">ShopThip (ช็อปทิพย์)</h3>
+                        <p class="text-sm text-muted leading-relaxed">A modern frontend exercise building a simulated shopping experience for dopamine-driven browsing.</p>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="https://poke.com/r/k0bZXR5tyJw" target="_blank" class="project-card bg-surface rounded-2xl border border-white/5 overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" alt="Moo Pak Zap">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-lg font-bold text-white mb-2">Moo Pak Zap (มูปากแซ่บ)</h3>
+                        <p class="text-sm text-muted leading-relaxed">A lifestyle-focused automation project delivering daily Thai horoscope insights with a sharp, modern personality.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Beyond Work -->
+        <section class="mb-32 py-16 border-y border-white/5">
+            <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-white/40 mb-8 text-center">Beyond the Office</h2>
+            <div class="max-w-2xl mx-auto text-center">
+                <p class="text-sm text-muted leading-relaxed font-medium">
+                    When not optimizing inventory flows, I navigate the city via Grab, manage a three-cat household, and explore new technical frameworks on a MacBook Air Midnight. I believe in efficiency at work and simplicity in lifestyle.
+                </p>
+            </div>
         </section>
 
         <!-- Footer -->
-        <footer class="py-12 border-t border-white/5 text-center">
-            <p class="text-white/40 mb-8">Built with a focus on clean code and operational precision.</p>
-            <div class="flex justify-center gap-6">
-                <a href="https://github.com/peichh" class="text-white/60 hover:text-white transition-colors">GitHub</a>
-                <a href="https://instagram.com" class="text-white/60 hover:text-white transition-colors">Instagram</a>
+        <footer class="text-center">
+            <div class="flex justify-center gap-10 mb-12">
+                <a href="mailto:Theerapong.thana@outlook.com" class="text-xs font-bold uppercase tracking-widest text-white hover:text-accent transition-colors">Outlook</a>
+                <a href="mailto:peach@poke.com" class="text-xs font-bold uppercase tracking-widest text-white hover:text-accent transition-colors">Poke Email</a>
+                <a href="https://github.com/peichh" class="text-xs font-bold uppercase tracking-widest text-white hover:text-accent transition-colors">GitHub</a>
             </div>
-            <p class="mt-12 text-xs text-white/20 uppercase tracking-[0.2em]">© 2026 Theerapong Thanarodpaibun. All rights reserved.</p>
+            <p class="text-[10px] uppercase tracking-[0.5em] text-white/20">© 2026 THEERAPONG THANARODPAIBUN</p>
         </footer>
     </main>
 
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
