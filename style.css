@@ -671,6 +671,8 @@ h3 {
 .contact-value {
   display: block;
   font-size: 1.25rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .contact-card:hover {
@@ -700,10 +702,32 @@ h3 {
 }
 
 @media (max-width: 720px) {
-  .nav-links { display: none; }
+  .nav-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--panel);
+    padding: 24px;
+    border-bottom: 1px solid var(--line);
+    gap: 20px;
+    box-shadow: var(--shadow);
+  }
+  .nav-links.open {
+    display: flex;
+  }
   h1 { font-size: 2.35rem; }
   h2 { font-size: 2.1rem; }
   .hero-stats, .proof-strip, .case-grid, .timeline-item { grid-template-columns: 1fr; }
-  .contact-card { padding: 24px; }
+  .contact-card {
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .contact-value { font-size: 1.1rem; }
 }
