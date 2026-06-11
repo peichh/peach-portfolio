@@ -22,10 +22,12 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <nav class="nav" id="top" aria-label="Primary navigation">
-    <a class="brand" href="#top" aria-label="Theerapong Thanarodpaibun home">
+  <div id="top" aria-hidden="true"></div>
+
+  <nav class="nav" aria-label="Primary navigation">
+    <a class="brand" href="#top" data-scroll-top aria-label="Theerapong Thanarodpaibun home">
       <span class="brand-mark">TT</span>
-      <span class="brand-text">Operations Portfolio</span>
+      <span class="brand-text" data-i18n="brand">Operations Portfolio</span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
       <span></span>
@@ -33,48 +35,52 @@
       <span></span>
     </button>
     <div class="nav-links" id="site-menu">
-      <a href="#expertise">Expertise</a>
-      <a href="#cases">Case Studies</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
+      <a href="#expertise" data-i18n="navExpertise">Expertise</a>
+      <a href="#cases" data-i18n="navCases">Case Studies</a>
+      <a href="#experience" data-i18n="navExperience">Experience</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
+      <div class="language-switch" aria-label="Language selector">
+        <button class="language-option active" type="button" data-language="en" aria-pressed="true">EN</button>
+        <button class="language-option" type="button" data-language="th" aria-pressed="false">TH</button>
+      </div>
     </div>
   </nav>
 
   <header class="site-header">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Inventory Planning / Warehouse Operations / Data Automation</p>
+        <p class="eyebrow" data-i18n="heroEyebrow">Inventory Planning / Warehouse Operations / Data Automation</p>
         <h1>
           <span>Theerapong</span>
           <span>Thanarodpaibun</span>
         </h1>
         <p class="hero-lede">
-          I turn warehouse movement, inventory records, and planning inputs into practical operating systems: cleaner dashboards, faster reports, sharper stock decisions, and work teams can repeat.
+          <span data-i18n="heroLede">I turn warehouse movement, inventory records, and planning inputs into practical operating systems: cleaner dashboards, faster reports, sharper stock decisions, and work teams can repeat.</span>
         </p>
         <div class="hero-actions" aria-label="Contact actions">
-          <a class="button primary" href="mailto:Theerapong.thana@outlook.com">Email Peach</a>
-          <a class="button secondary" href="#cases">View Case Studies</a>
+          <a class="button primary" href="mailto:Theerapong.thana@outlook.com" data-i18n="emailPeach">Email Peach</a>
+          <a class="button secondary" href="#cases" data-i18n="viewCases">View Case Studies</a>
         </div>
         <dl class="hero-stats" aria-label="Portfolio highlights">
           <div>
-            <dt>2 days to 1 hour</dt>
-            <dd>reporting cycle reduced with refreshable analytics</dd>
+            <dt data-i18n="statOne">2 days to 1 hour</dt>
+            <dd data-i18n="statOneDesc">reporting cycle reduced with refreshable analytics</dd>
           </div>
           <div>
-            <dt>4 domains</dt>
-            <dd>inventory, planning, automation, warehouse control</dd>
+            <dt data-i18n="statTwo">4 domains</dt>
+            <dd data-i18n="statTwoDesc">inventory, planning, automation, warehouse control</dd>
           </div>
           <div>
-            <dt>Bangkok</dt>
-            <dd>available for operations analysis and planning roles</dd>
+            <dt data-i18n="statThree">Bangkok</dt>
+            <dd data-i18n="statThreeDesc">available for operations analysis and planning roles</dd>
           </div>
         </dl>
       </div>
       <div class="hero-visual" aria-label="Operations control room visual">
         <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600&auto=format&fit=crop" alt="Team reviewing operational data dashboards">
         <div class="signal-panel">
-          <span>Current Focus</span>
-          <strong>Inventory visibility, stock accuracy, and automated reporting</strong>
+          <span data-i18n="currentFocus">Current Focus</span>
+          <strong data-i18n="currentFocusText">Inventory visibility, stock accuracy, and automated reporting</strong>
         </div>
       </div>
     </section>
@@ -83,18 +89,18 @@
   <main id="main">
     <section class="section intro-section" id="expertise">
       <div class="section-label">
-        <span>Expert Profile</span>
+        <span data-i18n="expertProfile">Expert Profile</span>
       </div>
       <div class="intro-grid">
         <div>
-          <h2>Built for roles where operations, data, and planning meet.</h2>
+          <h2 data-i18n="expertTitle">Built for roles where operations, data, and planning meet.</h2>
         </div>
         <div class="intro-copy">
           <p>
-            Peach combines hands-on warehouse discipline with planning analytics. The profile is strongest where a team needs someone who understands physical stock movement, can diagnose data gaps, and can build simple tools that make daily decisions faster.
+            <span data-i18n="expertP1">Peach combines hands-on warehouse discipline with planning analytics. The profile is strongest where a team needs someone who understands physical stock movement, can diagnose data gaps, and can build simple tools that make daily decisions faster.</span>
           </p>
           <p>
-            The working style is practical: map the process, clean the data, automate the repeatable parts, and make the result clear enough for warehouse, planning, and management teams to trust.
+            <span data-i18n="expertP2">The working style is practical: map the process, clean the data, automate the repeatable parts, and make the result clear enough for warehouse, planning, and management teams to trust.</span>
           </p>
         </div>
       </div>
@@ -104,58 +110,58 @@
       <div class="capability-grid">
         <article class="capability">
           <span class="capability-index">01</span>
-          <h3>Data Automation & Reporting</h3>
-          <p>Advanced Excel, Power Query, Excel VBA, basic SQL, dashboard reporting, data cleaning, KPI tracking, and refreshable reporting flows.</p>
+          <h3 data-i18n="capOneTitle">Data Automation & Reporting</h3>
+          <p data-i18n="capOneText">Advanced Excel, Power Query, Excel VBA, basic SQL, dashboard reporting, data cleaning, KPI tracking, and refreshable reporting flows.</p>
         </article>
         <article class="capability">
           <span class="capability-index">02</span>
-          <h3>Planning & Forecasting</h3>
-          <p>Capacity planning, demand planning, inventory optimization, sales trend analysis, budget vs. demand logic, and root cause analysis.</p>
+          <h3 data-i18n="capTwoTitle">Planning & Forecasting</h3>
+          <p data-i18n="capTwoText">Capacity planning, demand planning, inventory optimization, sales trend analysis, budget vs. demand logic, and root cause analysis.</p>
         </article>
         <article class="capability">
           <span class="capability-index">03</span>
-          <h3>Warehouse Control</h3>
-          <p>IT server spare parts control, inbound and outbound flow, returns, stock counts, FIFO, location management, and stock reconciliation.</p>
+          <h3 data-i18n="capThreeTitle">Warehouse Control</h3>
+          <p data-i18n="capThreeText">IT server spare parts control, inbound and outbound flow, returns, stock counts, FIFO, location management, and stock reconciliation.</p>
         </article>
         <article class="capability">
           <span class="capability-index">04</span>
-          <h3>Systems & Process Design</h3>
-          <p>Microsoft Dynamics NAV, inventory record maintenance, workflow standardization, process documentation, and practical operating routines.</p>
+          <h3 data-i18n="capFourTitle">Systems & Process Design</h3>
+          <p data-i18n="capFourText">Microsoft Dynamics NAV, inventory record maintenance, workflow standardization, process documentation, and practical operating routines.</p>
         </article>
       </div>
     </section>
 
     <section class="section proof-strip" aria-label="Operating strengths">
       <div>
-        <strong>Operational lens</strong>
-        <span>Understands what happens on the warehouse floor, not only in the spreadsheet.</span>
+        <strong data-i18n="proofOneTitle">Operational lens</strong>
+        <span data-i18n="proofOneText">Understands what happens on the warehouse floor, not only in the spreadsheet.</span>
       </div>
       <div>
-        <strong>Analytical build</strong>
-        <span>Turns scattered data into decision-ready views and repeatable reports.</span>
+        <strong data-i18n="proofTwoTitle">Analytical build</strong>
+        <span data-i18n="proofTwoText">Turns scattered data into decision-ready views and repeatable reports.</span>
       </div>
       <div>
-        <strong>Planning mindset</strong>
-        <span>Balances service levels, available capacity, and stock risk with measurable logic.</span>
+        <strong data-i18n="proofThreeTitle">Planning mindset</strong>
+        <span data-i18n="proofThreeText">Balances service levels, available capacity, and stock risk with measurable logic.</span>
       </div>
     </section>
 
     <section class="section cases-section" id="cases">
       <div class="section-heading">
-        <span class="section-kicker">Selected Work</span>
-        <h2>Case studies with measurable operational value.</h2>
+        <span class="section-kicker" data-i18n="selectedWork">Selected Work</span>
+        <h2 data-i18n="casesTitle">Case studies with measurable operational value.</h2>
       </div>
       <div class="case-grid">
         <article class="case-card featured">
           <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=1400&auto=format&fit=crop" alt="Analytics dashboard on a laptop">
           <div class="case-content">
-            <p class="case-type">Automation / Planning Analytics</p>
-            <h3>Refreshable Reporting Pipeline</h3>
-            <p>Built a Power Query and basic SQL workflow that replaced manual report preparation, reducing a recurring reporting cycle from 2 days to 1 hour.</p>
+            <p class="case-type" data-i18n="caseOneType">Automation / Planning Analytics</p>
+            <h3 data-i18n="caseOneTitle">Refreshable Reporting Pipeline</h3>
+            <p data-i18n="caseOneText">Built a Power Query and basic SQL workflow that replaced manual report preparation, reducing a recurring reporting cycle from 2 days to 1 hour.</p>
             <ul>
-              <li>Standardized source extraction and transformation.</li>
-              <li>Reduced manual copy-paste risk and rework.</li>
-              <li>Improved management visibility through reusable dashboards.</li>
+              <li data-i18n="caseOneLi1">Standardized source extraction and transformation.</li>
+              <li data-i18n="caseOneLi2">Reduced manual copy-paste risk and rework.</li>
+              <li data-i18n="caseOneLi3">Improved management visibility through reusable dashboards.</li>
             </ul>
           </div>
         </article>
@@ -163,18 +169,18 @@
         <article class="case-card">
           <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop" alt="Warehouse shelves and inventory bins">
           <div class="case-content">
-            <p class="case-type">Warehouse Optimization</p>
-            <h3>Spare Parts Location Planning</h3>
-            <p>Analyzed part movement frequency to classify fast-moving, slow-moving, and dead stock, then reorganized locations to support faster issuing and clearer control.</p>
+            <p class="case-type" data-i18n="caseTwoType">Warehouse Optimization</p>
+            <h3 data-i18n="caseTwoTitle">Spare Parts Location Planning</h3>
+            <p data-i18n="caseTwoText">Analyzed part movement frequency to classify fast-moving, slow-moving, and dead stock, then reorganized locations to support faster issuing and clearer control.</p>
           </div>
         </article>
 
         <article class="case-card">
           <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop" alt="Planning documents and charts on a desk">
           <div class="case-content">
-            <p class="case-type">Demand / Capacity Planning</p>
-            <h3>Budget vs. Demand Logic Tool</h3>
-            <p>Developed a planning model to compare resource capacity with demand requirements, helping planners reduce manual judgment and align allocation decisions.</p>
+            <p class="case-type" data-i18n="caseThreeType">Demand / Capacity Planning</p>
+            <h3 data-i18n="caseThreeTitle">Budget vs. Demand Logic Tool</h3>
+            <p data-i18n="caseThreeText">Developed a planning model to compare resource capacity with demand requirements, helping planners reduce manual judgment and align allocation decisions.</p>
           </div>
         </article>
       </div>
@@ -182,95 +188,95 @@
 
     <section class="section experience-section" id="experience">
       <div class="section-heading compact">
-        <span class="section-kicker">Career Timeline</span>
-        <h2>Experience across warehouse execution and planning analytics.</h2>
+        <span class="section-kicker" data-i18n="careerTimeline">Career Timeline</span>
+        <h2 data-i18n="experienceTitle">Experience across warehouse execution and planning analytics.</h2>
       </div>
       <div class="timeline">
         <article class="timeline-item">
-          <div class="timeline-date">Mar 2026 - Present</div>
+          <div class="timeline-date" data-i18n="jobOneDate">Mar 2026 - Present</div>
           <div class="timeline-content">
-            <h3>Warehouse Specialist</h3>
+            <h3 data-i18n="jobOneTitle">Warehouse Specialist</h3>
             <p class="company">TITANICOM TECH (THAILAND) CO., LTD.</p>
-            <p>Manages IT server spare parts inventory from receiving to issuance, returns, stock counting, location control, and reconciliation between physical stock and records.</p>
+            <p data-i18n="jobOneSummary">Manages IT server spare parts inventory from receiving to issuance, returns, stock counting, location control, and reconciliation between physical stock and records.</p>
             <div class="tag-row">
               <span>Spare Parts Control</span>
               <span>Stock Accuracy</span>
               <span>Location Planning</span>
             </div>
             <details class="experience-details">
-              <summary>Read detailed scope</summary>
+              <summary data-i18n="readDetails">Read detailed scope</summary>
               <ul>
-                <li>Managed inbound receiving, outbound issuance, returns, cycle counts, and inventory record reconciliation for IT server spare parts.</li>
-                <li>Analyzed movement history to classify fast-moving, slow-moving, and dead stock items for clearer storage and replenishment decisions.</li>
-                <li>Reorganized warehouse locations around picking frequency to reduce walking distance and improve spare parts accessibility.</li>
-                <li>Prepared recurring inventory and operations reports covering stock movement, usage, outstanding items, and warehouse performance indicators.</li>
-                <li>Standardized storage arrangement, spare parts handling, and inventory update routines to improve process consistency.</li>
+                <li data-i18n="jobOneLi1">Managed inbound receiving, outbound issuance, returns, cycle counts, and inventory record reconciliation for IT server spare parts.</li>
+                <li data-i18n="jobOneLi2">Analyzed movement history to classify fast-moving, slow-moving, and dead stock items for clearer storage and replenishment decisions.</li>
+                <li data-i18n="jobOneLi3">Reorganized warehouse locations around picking frequency to reduce walking distance and improve spare parts accessibility.</li>
+                <li data-i18n="jobOneLi4">Prepared recurring inventory and operations reports covering stock movement, usage, outstanding items, and warehouse performance indicators.</li>
+                <li data-i18n="jobOneLi5">Standardized storage arrangement, spare parts handling, and inventory update routines to improve process consistency.</li>
               </ul>
             </details>
           </div>
         </article>
         <article class="timeline-item">
-          <div class="timeline-date">Feb 2025 - Feb 2026</div>
+          <div class="timeline-date" data-i18n="jobTwoDate">Feb 2025 - Feb 2026</div>
           <div class="timeline-content">
-            <h3>Capacity Planner</h3>
+            <h3 data-i18n="jobTwoTitle">Capacity Planner</h3>
             <p class="company">HANESBRANDS ROH ASIA LTD.</p>
-            <p>Built automated reporting and planning tools using Power Query, basic SQL, and Excel logic to improve budget, demand, and resource visibility.</p>
+            <p data-i18n="jobTwoSummary">Built automated reporting and planning tools using Power Query, basic SQL, and Excel logic to improve budget, demand, and resource visibility.</p>
             <div class="tag-row">
               <span>Power Query</span>
               <span>SQL</span>
               <span>Dashboarding</span>
             </div>
             <details class="experience-details">
-              <summary>Read detailed scope</summary>
+              <summary data-i18n="readDetails">Read detailed scope</summary>
               <ul>
-                <li>Built an automated reporting pipeline using Power Query and basic SQL to extract, transform, and refresh planning data.</li>
-                <li>Replaced manual report preparation with reusable dashboard logic, reducing report cycle time from 2 days to 1 hour.</li>
-                <li>Created a logic-based planning tool to compare budget, demand, and available resources for more consistent allocation decisions.</li>
-                <li>Improved planning visibility by standardizing source data, transformation rules, and refresh routines.</li>
+                <li data-i18n="jobTwoLi1">Built an automated reporting pipeline using Power Query and basic SQL to extract, transform, and refresh planning data.</li>
+                <li data-i18n="jobTwoLi2">Replaced manual report preparation with reusable dashboard logic, reducing report cycle time from 2 days to 1 hour.</li>
+                <li data-i18n="jobTwoLi3">Created a logic-based planning tool to compare budget, demand, and available resources for more consistent allocation decisions.</li>
+                <li data-i18n="jobTwoLi4">Improved planning visibility by standardizing source data, transformation rules, and refresh routines.</li>
               </ul>
             </details>
           </div>
         </article>
         <article class="timeline-item">
-          <div class="timeline-date">Jun 2024 - Dec 2024</div>
+          <div class="timeline-date" data-i18n="jobThreeDate">Jun 2024 - Dec 2024</div>
           <div class="timeline-content">
-            <h3>Demand Planner</h3>
+            <h3 data-i18n="jobThreeTitle">Demand Planner</h3>
             <p class="company">HANESBRANDS ROH ASIA LTD.</p>
-            <p>Analyzed sales trends, monitored inventory thresholds, initiated production orders, and investigated order cancellations through root cause analysis.</p>
+            <p data-i18n="jobThreeSummary">Analyzed sales trends, monitored inventory thresholds, initiated production orders, and investigated order cancellations through root cause analysis.</p>
             <div class="tag-row">
               <span>Forecasting</span>
               <span>Stockout Risk</span>
               <span>RCA</span>
             </div>
             <details class="experience-details">
-              <summary>Read detailed scope</summary>
+              <summary data-i18n="readDetails">Read detailed scope</summary>
               <ul>
-                <li>Analyzed sales trends with Excel Pivot Tables to support demand planning decisions and production order timing.</li>
-                <li>Monitored inventory thresholds and initiated production orders for styles below safety levels to reduce stockout risk.</li>
-                <li>Investigated order cancellations through root cause analysis, including factory delay and warehouse discrepancy factors.</li>
-                <li>Supported planning reviews by connecting demand signals with inventory status and production needs.</li>
+                <li data-i18n="jobThreeLi1">Analyzed sales trends with Excel Pivot Tables to support demand planning decisions and production order timing.</li>
+                <li data-i18n="jobThreeLi2">Monitored inventory thresholds and initiated production orders for styles below safety levels to reduce stockout risk.</li>
+                <li data-i18n="jobThreeLi3">Investigated order cancellations through root cause analysis, including factory delay and warehouse discrepancy factors.</li>
+                <li data-i18n="jobThreeLi4">Supported planning reviews by connecting demand signals with inventory status and production needs.</li>
               </ul>
             </details>
           </div>
         </article>
         <article class="timeline-item">
-          <div class="timeline-date">Aug 2023 - May 2024</div>
+          <div class="timeline-date" data-i18n="jobFourDate">Aug 2023 - May 2024</div>
           <div class="timeline-content">
-            <h3>Warehouse Internship</h3>
+            <h3 data-i18n="jobFourTitle">Warehouse Internship</h3>
             <p class="company">Maguro Group Public Company Limited</p>
-            <p>Supported purchase requisitions, order quantity decisions, FIFO procedures, monthly stock counts, and inventory records in Microsoft Dynamics NAV.</p>
+            <p data-i18n="jobFourSummary">Supported purchase requisitions, order quantity decisions, FIFO procedures, monthly stock counts, and inventory records in Microsoft Dynamics NAV.</p>
             <div class="tag-row">
               <span>Dynamics NAV</span>
               <span>FIFO</span>
               <span>PR Control</span>
             </div>
             <details class="experience-details">
-              <summary>Read detailed scope</summary>
+              <summary data-i18n="readDetails">Read detailed scope</summary>
               <ul>
-                <li>Processed purchase requisitions and maintained stock records in Microsoft Dynamics NAV.</li>
-                <li>Calculated appropriate order quantities to prevent overstocking while minimizing shortage and waste risk.</li>
-                <li>Supported FIFO procedures, monthly stock counts, and regular inventory record updates.</li>
-                <li>Helped keep warehouse operations aligned with stock accuracy, availability, and replenishment routines.</li>
+                <li data-i18n="jobFourLi1">Processed purchase requisitions and maintained stock records in Microsoft Dynamics NAV.</li>
+                <li data-i18n="jobFourLi2">Calculated appropriate order quantities to prevent overstocking while minimizing shortage and waste risk.</li>
+                <li data-i18n="jobFourLi3">Supported FIFO procedures, monthly stock counts, and regular inventory record updates.</li>
+                <li data-i18n="jobFourLi4">Helped keep warehouse operations aligned with stock accuracy, availability, and replenishment routines.</li>
               </ul>
             </details>
           </div>
@@ -280,40 +286,40 @@
 
     <section class="section education-section">
       <div>
-        <span class="section-kicker">Education</span>
-        <h2>Bachelor of Logistics and Supply Chain Management</h2>
+        <span class="section-kicker" data-i18n="education">Education</span>
+        <h2 data-i18n="educationTitle">Bachelor of Logistics and Supply Chain Management</h2>
       </div>
       <div class="education-card">
-        <p>Dhurakij Pundit University, College of Innovative Business and Accountancy (CIBA)</p>
-        <strong>First Class Honours / GPA 3.51 / 2020 - 2024</strong>
+        <p data-i18n="educationSchool">Dhurakij Pundit University, College of Innovative Business and Accountancy (CIBA)</p>
+        <strong data-i18n="educationHonours">First Class Honours / GPA 3.51 / 2020 - 2024</strong>
       </div>
     </section>
 
     <section class="section project-section">
       <div class="section-heading compact">
-        <span class="section-kicker">Portfolio Links</span>
-        <h2>Additional work and public experiments.</h2>
+        <span class="section-kicker" data-i18n="portfolioLinks">Portfolio Links</span>
+        <h2 data-i18n="portfolioTitle">Additional work and public experiments.</h2>
       </div>
       <div class="project-list">
         <a href="https://peichh.github.io/shopthip-site/" target="_blank" rel="noopener noreferrer">
           <span>ShopThip</span>
-          <strong>Modern shopping interface exercise</strong>
+          <strong data-i18n="projectOne">Modern shopping interface exercise</strong>
         </a>
         <a href="https://poke.com/r/k0bZXR5tyJw" target="_blank" rel="noopener noreferrer">
           <span>Moo Pak Zap</span>
-          <strong>Daily Thai horoscope automation concept</strong>
+          <strong data-i18n="projectTwo">Daily Thai horoscope automation concept</strong>
         </a>
         <a href="https://github.com/peichh" target="_blank" rel="noopener noreferrer">
           <span>GitHub</span>
-          <strong>Public repositories and experiments</strong>
+          <strong data-i18n="projectThree">Public repositories and experiments</strong>
         </a>
       </div>
     </section>
 
     <section class="contact-section" id="contact">
       <div>
-        <span class="section-kicker">Contact</span>
-        <h2>Looking for inventory planning, operations analysis, or data automation work.</h2>
+        <span class="section-kicker" data-i18n="contact">Contact</span>
+        <h2 data-i18n="contactTitle">Looking for inventory planning, operations analysis, or data automation work.</h2>
       </div>
       <div class="contact-actions">
         <a class="button primary" href="mailto:Theerapong.thana@outlook.com">Theerapong.thana@outlook.com</a>
@@ -323,8 +329,8 @@
   </main>
 
   <footer class="footer">
-    <p>© 2026 Theerapong Thanarodpaibun. Built as a focused operations portfolio.</p>
-    <a href="#top">Back to top</a>
+    <p data-i18n="footerText">© 2026 Theerapong Thanarodpaibun. Built as a focused operations portfolio.</p>
+    <a href="#top" data-scroll-top data-i18n="backToTop">Back to top</a>
   </footer>
 
   <script src="script.js"></script>
