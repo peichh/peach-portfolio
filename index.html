@@ -17,6 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -59,7 +60,10 @@
         </p>
         <div class="hero-actions" aria-label="Contact actions">
           <a class="button primary" href="mailto:Theerapong.thana@outlook.com" data-i18n="emailPeach">Email Peach</a>
-          <a class="button secondary" href="#cases" data-i18n="viewCases">View Case Studies</a>
+          <a class="button secondary" href="tel:+66808314717">
+            <i class="fas fa-phone-alt" style="margin-right: 8px;"></i>
+            <span>+66 80 831 4717</span>
+          </a>
         </div>
         <dl class="hero-stats" aria-label="Portfolio highlights">
           <div>
@@ -67,8 +71,8 @@
             <dd data-i18n="statOneDesc">reporting cycle reduced with refreshable analytics</dd>
           </div>
           <div>
-            <dt data-i18n="statTwo">4 domains</dt>
-            <dd data-i18n="statTwoDesc">inventory, planning, automation, warehouse control</dd>
+            <dt data-i18n="statKPI">100% Accuracy</dt>
+            <dd data-i18n="statKPIDesc">Inventory precision with discrepancies reduced to < 0.1%</dd>
           </div>
           <div>
             <dt data-i18n="statThree">Bangkok</dt>
@@ -99,9 +103,16 @@
           <p>
             <span data-i18n="expertP1">Peach combines hands-on warehouse discipline with planning analytics. The profile is strongest where a team needs someone who understands physical stock movement, can diagnose data gaps, and can build simple tools that make daily decisions faster.</span>
           </p>
-          <p>
-            <span data-i18n="expertP2">The working style is practical: map the process, clean the data, automate the repeatable parts, and make the result clear enough for warehouse, planning, and management teams to trust.</span>
-          </p>
+          <div class="skill-badges">
+            <div class="skill-badge" title="Microsoft Excel"><i class="fas fa-file-excel"></i><span>Excel</span></div>
+            <div class="skill-badge" title="VBA Automation"><i class="fas fa-code"></i><span>VBA</span></div>
+            <div class="skill-badge" title="SQL Databases"><i class="fas fa-database"></i><span>SQL</span></div>
+            <div class="skill-badge" title="Power Query"><i class="fas fa-filter"></i><span>Power Query</span></div>
+            <div class="skill-badge" title="HTML5"><i class="fab fa-html5"></i><span>HTML</span></div>
+            <div class="skill-badge" title="CSS3"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+            <div class="skill-badge" title="JavaScript"><i class="fab fa-js"></i><span>JS</span></div>
+            <div class="skill-badge" title="Tailwind CSS"><i class="fab fa-css3"></i><span>Tailwind</span></div>
+          </div>
         </div>
       </div>
     </section>
@@ -323,7 +334,10 @@
       </div>
       <div class="contact-actions">
         <a class="button primary" href="mailto:Theerapong.thana@outlook.com">Theerapong.thana@outlook.com</a>
-        <a class="button secondary" href="tel:+66808314717">+66 80 831 4717</a>
+        <a class="button secondary featured-phone" href="tel:+66808314717">
+          <i class="fas fa-phone-alt"></i>
+          <span>+66 80 831 4717</span>
+        </a>
       </div>
     </section>
   </main>
