@@ -604,6 +604,16 @@ h3 {
   padding: 24px 0;
 }
 
+.project-list a span {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.project-list a strong {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .contact-section {
   background: var(--navy);
   color: #fff;
@@ -699,6 +709,9 @@ h3 {
   h1 { font-size: 3.5rem; }
   h2 { font-size: 2.8rem; }
   .proof-strip, .case-grid { grid-template-columns: repeat(2, 1fr); }
+  .case-card.featured {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 720px) {
@@ -730,4 +743,11 @@ h3 {
     align-items: flex-start;
   }
   .contact-value { font-size: 1.1rem; }
+  .project-list a {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .case-content {
+    padding: 24px;
+  }
 }
