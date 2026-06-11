@@ -66,15 +66,15 @@
           </a>
         </div>
         <dl class="hero-stats" aria-label="Portfolio highlights">
-          <div>
+          <div class="stat-block">
             <dt data-i18n="statOne">2 days to 1 hour</dt>
             <dd data-i18n="statOneDesc">reporting cycle reduced with refreshable analytics</dd>
           </div>
-          <div class="stat-highlight">
+          <div class="stat-block premium">
             <dt data-i18n="statKPI">100% Accuracy</dt>
             <dd data-i18n="statKPIDesc">Inventory precision with discrepancies &lt; 0.1%</dd>
           </div>
-          <div>
+          <div class="stat-block">
             <dt data-i18n="statThree">Bangkok</dt>
             <dd data-i18n="statThreeDesc">available for operations analysis and planning roles</dd>
           </div>
@@ -103,15 +103,15 @@
           <p>
             <span data-i18n="expertP1">Peach combines hands-on warehouse discipline with planning analytics. The profile is strongest where a team needs someone who understands physical stock movement, can diagnose data gaps, and can build simple tools that make daily decisions faster.</span>
           </p>
-          <div class="skill-stack">
-            <div class="skill-tag"><i class="fas fa-file-excel"></i><span>Excel</span></div>
-            <div class="skill-tag"><i class="fas fa-code"></i><span>VBA</span></div>
-            <div class="skill-tag"><i class="fas fa-database"></i><span>SQL</span></div>
-            <div class="skill-tag"><i class="fas fa-filter"></i><span>Power Query</span></div>
-            <div class="skill-tag"><i class="fab fa-html5"></i><span>HTML</span></div>
-            <div class="skill-tag"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
-            <div class="skill-tag"><i class="fab fa-js"></i><span>JS</span></div>
-            <div class="skill-tag"><i class="fab fa-css3"></i><span>Tailwind</span></div>
+          <div class="skill-cloud">
+            <span class="skill-pill">Excel</span>
+            <span class="skill-pill">VBA</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">Power Query</span>
+            <span class="skill-pill">HTML</span>
+            <span class="skill-pill">CSS</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">Tailwind CSS</span>
           </div>
         </div>
       </div>
@@ -119,39 +119,67 @@
 
     <section class="section capability-section">
       <div class="capability-grid">
-        <article class="capability">
-          <span class="capability-index">01</span>
-          <h3 data-i18n="capOneTitle">Data Automation & Reporting</h3>
-          <p data-i18n="capOneText">Advanced Excel, Power Query, Excel VBA, basic SQL, dashboard reporting, data cleaning, KPI tracking, and refreshable reporting flows.</p>
+        <article class="capability-card">
+          <div class="cap-header">
+            <span class="cap-index">01</span>
+            <h3 data-i18n="capOneTitle">Data Automation & Reporting</h3>
+          </div>
+          <ul class="cap-list">
+            <li><i class="fas fa-check"></i> Advanced Excel & Power Query</li>
+            <li><i class="fas fa-check"></i> Excel VBA Automation</li>
+            <li><i class="fas fa-check"></i> Dashboard & KPI Tracking</li>
+            <li><i class="fas fa-check">Check"></i> Refreshable Reporting Flows</li>
+          </ul>
         </article>
-        <article class="capability">
-          <span class="capability-index">02</span>
-          <h3 data-i18n="capTwoTitle">Planning & Forecasting</h3>
-          <p data-i18n="capTwoText">Capacity planning, demand planning, inventory optimization, sales trend analysis, budget vs. demand logic, and root cause analysis.</p>
+        <article class="capability-card">
+          <div class="cap-header">
+            <span class="cap-index">02</span>
+            <h3 data-i18n="capTwoTitle">Planning & Forecasting</h3>
+          </div>
+          <ul class="cap-list">
+            <li><i class="fas fa-check"></i> Capacity & Demand Planning</li>
+            <li><i class="fas fa-check"></i> Inventory Optimization</li>
+            <li><i class="fas fa-check"></i> Sales Trend Analysis</li>
+            <li><i class="fas fa-check">Check"></i> Root Cause Analysis</li>
+          </ul>
         </article>
-        <article class="capability">
-          <span class="capability-index">03</span>
-          <h3 data-i18n="capThreeTitle">Warehouse Control</h3>
-          <p data-i18n="capThreeText">IT server spare parts control, inbound and outbound flow, returns, stock counts, FIFO, location management, and stock reconciliation.</p>
+        <article class="capability-card">
+          <div class="cap-header">
+            <span class="cap-index">03</span>
+            <h3 data-i18n="capThreeTitle">Warehouse Control</h3>
+          </div>
+          <ul class="cap-list">
+            <li><i class="fas fa-check"></i> IT Server Spare Parts Control</li>
+            <li><i class="fas fa-check"></i> Stock Counts & Reconciliation</li>
+            <li><i class="fas fa-check"></i> FIFO & Location Management</li>
+            <li><i class="fas fa-check">Check"></i> Inbound & Outbound Flow</li>
+          </ul>
         </article>
-        <article class="capability">
-          <span class="capability-index">04</span>
-          <h3 data-i18n="capFourTitle">Systems & Process Design</h3>
-          <p data-i18n="capFourText">Microsoft Dynamics NAV, inventory record maintenance, workflow standardization, process documentation, and practical operating routines.</p>
+        <article class="capability-card">
+          <div class="cap-header">
+            <span class="cap-index">04</span>
+            <h3 data-i18n="capFourTitle">Systems & Process Design</h3>
+          </div>
+          <ul class="cap-list">
+            <li><i class="fas fa-check"></i> Microsoft Dynamics NAV</li>
+            <li><i class="fas fa-check"></i> Workflow Standardization</li>
+            <li><i class="fas fa-check"></i> Process Documentation</li>
+            <li><i class="fas fa-check">Check"></i> Operating Routines</li>
+          </ul>
         </article>
       </div>
     </section>
 
     <section class="section proof-strip" aria-label="Operating strengths">
-      <div>
+      <div class="proof-card">
         <strong data-i18n="proofOneTitle">Operational lens</strong>
         <span data-i18n="proofOneText">Understands what happens on the warehouse floor, not only in the spreadsheet.</span>
       </div>
-      <div>
+      <div class="proof-card secondary">
         <strong data-i18n="proofTwoTitle">Analytical build</strong>
         <span data-i18n="proofTwoText">Turns scattered data into decision-ready views and repeatable reports.</span>
       </div>
-      <div>
+      <div class="proof-card tertiary">
         <strong data-i18n="proofThreeTitle">Planning mindset</strong>
         <span data-i18n="proofThreeText">Balances service levels, available capacity, and stock risk with measurable logic.</span>
       </div>
@@ -169,7 +197,7 @@
             <p class="case-type" data-i18n="caseOneType">Automation / Planning Analytics</p>
             <h3 data-i18n="caseOneTitle">Refreshable Reporting Pipeline</h3>
             <p data-i18n="caseOneText">Built a Power Query and basic SQL workflow that replaced manual report preparation, reducing a recurring reporting cycle from 2 days to 1 hour.</p>
-            <ul>
+            <ul class="styled-list">
               <li data-i18n="caseOneLi1">Standardized source extraction and transformation.</li>
               <li data-i18n="caseOneLi2">Reduced manual copy-paste risk and rework.</li>
               <li data-i18n="caseOneLi3">Improved management visibility through reusable dashboards.</li>
