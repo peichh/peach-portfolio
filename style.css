@@ -124,6 +124,41 @@ a {
   color: var(--blue);
 }
 
+.language-switch {
+  align-items: center;
+  border: 1px solid var(--line);
+  display: inline-flex;
+  padding: 3px;
+}
+
+.language-option {
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  min-height: 30px;
+  padding: 6px 9px;
+}
+
+.language-option.active {
+  background: var(--ink);
+  color: #fff;
+}
+
+.language-option:hover,
+.language-option:focus-visible {
+  color: var(--blue);
+}
+
+.language-option.active:hover,
+.language-option.active:focus-visible {
+  color: #fff;
+}
+
 .nav-toggle {
   background: var(--panel);
   border: 1px solid var(--line);
@@ -724,6 +759,18 @@ h3 {
     border-bottom: 1px solid var(--line);
     padding: 18px 0;
     width: 100%;
+  }
+
+  .language-switch {
+    align-self: stretch;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 16px 0 0;
+  }
+
+  .language-option {
+    border: 1px solid var(--line);
+    flex: 1;
   }
 
   .hero,
