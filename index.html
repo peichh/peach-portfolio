@@ -1,407 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THEERAPONG THANARODPAIBUN | Inventory & Planning Specialist</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        white: '#ffffff',
-                        slate: '#f8fafc',
-                        navy: '#0f172a',
-                        accent: '#1e40af',
-                        muted: '#64748b',
-                        border: 'rgba(15, 23, 42, 0.1)',
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'Kanit', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            background-color: #ffffff;
-            color: #0f172a;
-            -webkit-font-smoothing: antialiased;
-        }
-        .hero-gradient {
-            background: radial-gradient(circle at top right, rgba(30, 64, 175, 0.03), transparent 40%),
-                        radial-gradient(circle at bottom left, rgba(30, 64, 175, 0.02), transparent 40%);
-        }
-        .section-divider {
-            height: 1px;
-            background: linear-gradient(to right, rgba(15, 23, 42, 0.1), transparent);
-        }
-        .project-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            background-color: #ffffff;
-            border: 1px solid rgba(15, 23, 42, 0.05);
-        }
-        .project-card:hover {
-            border-color: rgba(30, 64, 175, 0.2);
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.1);
-        }
-        .timeline-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #1e40af;
-            border-radius: 50%;
-            position: absolute;
-            left: -4px;
-            top: 10px;
-        }
-        .image-overlay {
-            background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.6));
-        }
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #f8fafc; }
-        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
-
-        /* Accordion Styles */
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-            opacity: 0;
-        }
-        .accordion-item.active .accordion-content {
-            max-height: 1000px;
-            opacity: 1;
-            margin-top: 1rem;
-        }
-        .accordion-header {
-            cursor: pointer;
-        }
-        .accordion-header h3, .accordion-header h4 {
-            transition: color 0.2s ease;
-        }
-        .accordion-item.active .accordion-header h4 {
-            color: #1e40af;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Theerapong Thanarodpaibun, an inventory, planning, and operations data specialist in Bangkok.">
+  <meta name="theme-color" content="#0f172a">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Theerapong Thanarodpaibun | Inventory & Planning Specialist">
+  <meta property="og:description" content="Warehouse operations, planning analytics, Excel automation, Power Query, VBA, and inventory visibility.">
+  <meta property="og:url" content="https://peichh.github.io/peach-portfolio/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600&auto=format&fit=crop">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Theerapong Thanarodpaibun | Operations Data Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="font-sans selection:bg-accent/10">
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-border">
-        <div class="max-w-6xl mx-auto px-8 py-6 flex justify-between items-center">
-            <a href="#" class="text-xs font-bold tracking-[0.3em] uppercase text-navy hover:text-accent transition-colors">TT</a>
-            <div class="hidden md:flex gap-10 text-[11px] font-bold uppercase tracking-widest text-muted">
-                <a href="#about" class="hover:text-navy transition-colors">Summary</a>
-                <a href="#experience" class="hover:text-navy transition-colors">Experience</a>
-                <a href="#projects" class="hover:text-navy transition-colors">Projects</a>
-                <a href="mailto:Theerapong.thana@outlook.com" class="hover:text-navy transition-colors">Contact</a>
-            </div>
-        </div>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Theerapong Thanarodpaibun home">
+        <span class="brand-mark">TT</span>
+        <span class="brand-text">Operations Portfolio</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="site-menu">
+        <a href="#expertise">Expertise</a>
+        <a href="#cases">Case Studies</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
 
-    <div id="hero" class="hero-gradient min-h-screen">
-        <!-- Hero Section -->
-        <header class="max-w-6xl mx-auto px-8 pt-12 md:pt-20 pb-32">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div class="order-2 lg:order-1">
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter text-navy mb-6 leading-[1.1] md:leading-none">
-                        <span class="block">THEERAPONG</span>
-                        <span class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl block md:inline whitespace-nowrap">THANARODPAIBUN</span>
-                    </h1>
-                    <p class="text-lg md:text-xl text-accent font-semibold mb-8 tracking-tight">
-                        Inventory & Planning Specialist | Excel Automation | Warehouse Operations
-                    </p>
-                    <div class="flex flex-wrap gap-x-8 gap-y-3 text-sm text-muted font-medium uppercase tracking-wider mb-10">
-                        <a href="mailto:Theerapong.thana@outlook.com" class="hover:text-navy transition-colors">Theerapong.thana@outlook.com</a>
-                        <span>+66 80 831 4717</span>
-                        <span>Bangkok, Thailand</span>
-                    </div>
-                </div>
-                <div class="order-1 lg:order-2 relative h-[300px] sm:h-[400px] rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl shadow-navy/5">
-                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop" alt="Data Infrastructure" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 image-overlay"></div>
-                </div>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Inventory Planning / Warehouse Operations / Data Automation</p>
+        <h1>Theerapong Thanarodpaibun</h1>
+        <p class="hero-lede">
+          I turn warehouse movement, inventory records, and planning inputs into practical operating systems: cleaner dashboards, faster reports, sharper stock decisions, and work teams can repeat.
+        </p>
+        <div class="hero-actions" aria-label="Contact actions">
+          <a class="button primary" href="mailto:Theerapong.thana@outlook.com">Email Peach</a>
+          <a class="button secondary" href="#cases">View Case Studies</a>
+        </div>
+        <dl class="hero-stats" aria-label="Portfolio highlights">
+          <div>
+            <dt>2 days to 1 hour</dt>
+            <dd>reporting cycle reduced with refreshable analytics</dd>
+          </div>
+          <div>
+            <dt>4 domains</dt>
+            <dd>inventory, planning, automation, warehouse control</dd>
+          </div>
+          <div>
+            <dt>Bangkok</dt>
+            <dd>available for operations analysis and planning roles</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="hero-visual" aria-label="Operations control room visual">
+        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600&auto=format&fit=crop" alt="Team reviewing operational data dashboards">
+        <div class="signal-panel">
+          <span>Current Focus</span>
+          <strong>Inventory visibility, stock accuracy, and automated reporting</strong>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main id="main">
+    <section class="section intro-section" id="expertise">
+      <div class="section-label">
+        <span>Expert Profile</span>
+      </div>
+      <div class="intro-grid">
+        <div>
+          <h2>Built for roles where operations, data, and planning meet.</h2>
+        </div>
+        <div class="intro-copy">
+          <p>
+            Peach combines hands-on warehouse discipline with planning analytics. The profile is strongest where a team needs someone who understands physical stock movement, can diagnose data gaps, and can build simple tools that make daily decisions faster.
+          </p>
+          <p>
+            The working style is practical: map the process, clean the data, automate the repeatable parts, and make the result clear enough for warehouse, planning, and management teams to trust.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section capability-section">
+      <div class="capability-grid">
+        <article class="capability">
+          <span class="capability-index">01</span>
+          <h3>Data Automation & Reporting</h3>
+          <p>Advanced Excel, Power Query, Excel VBA, basic SQL, dashboard reporting, data cleaning, KPI tracking, and refreshable reporting flows.</p>
+        </article>
+        <article class="capability">
+          <span class="capability-index">02</span>
+          <h3>Planning & Forecasting</h3>
+          <p>Capacity planning, demand planning, inventory optimization, sales trend analysis, budget vs. demand logic, and root cause analysis.</p>
+        </article>
+        <article class="capability">
+          <span class="capability-index">03</span>
+          <h3>Warehouse Control</h3>
+          <p>IT server spare parts control, inbound and outbound flow, returns, stock counts, FIFO, location management, and stock reconciliation.</p>
+        </article>
+        <article class="capability">
+          <span class="capability-index">04</span>
+          <h3>Systems & Process Design</h3>
+          <p>Microsoft Dynamics NAV, inventory record maintenance, workflow standardization, process documentation, and practical operating routines.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section proof-strip" aria-label="Operating strengths">
+      <div>
+        <strong>Operational lens</strong>
+        <span>Understands what happens on the warehouse floor, not only in the spreadsheet.</span>
+      </div>
+      <div>
+        <strong>Analytical build</strong>
+        <span>Turns scattered data into decision-ready views and repeatable reports.</span>
+      </div>
+      <div>
+        <strong>Planning mindset</strong>
+        <span>Balances service levels, available capacity, and stock risk with measurable logic.</span>
+      </div>
+    </section>
+
+    <section class="section cases-section" id="cases">
+      <div class="section-heading">
+        <span class="section-kicker">Selected Work</span>
+        <h2>Case studies with measurable operational value.</h2>
+      </div>
+      <div class="case-grid">
+        <article class="case-card featured">
+          <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=1400&auto=format&fit=crop" alt="Analytics dashboard on a laptop">
+          <div class="case-content">
+            <p class="case-type">Automation / Planning Analytics</p>
+            <h3>Refreshable Reporting Pipeline</h3>
+            <p>Built a Power Query and basic SQL workflow that replaced manual report preparation, reducing a recurring reporting cycle from 2 days to 1 hour.</p>
+            <ul>
+              <li>Standardized source extraction and transformation.</li>
+              <li>Reduced manual copy-paste risk and rework.</li>
+              <li>Improved management visibility through reusable dashboards.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="case-card">
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop" alt="Warehouse shelves and inventory bins">
+          <div class="case-content">
+            <p class="case-type">Warehouse Optimization</p>
+            <h3>Spare Parts Location Planning</h3>
+            <p>Analyzed part movement frequency to classify fast-moving, slow-moving, and dead stock, then reorganized locations to support faster issuing and clearer control.</p>
+          </div>
+        </article>
+
+        <article class="case-card">
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop" alt="Planning documents and charts on a desk">
+          <div class="case-content">
+            <p class="case-type">Demand / Capacity Planning</p>
+            <h3>Budget vs. Demand Logic Tool</h3>
+            <p>Developed a planning model to compare resource capacity with demand requirements, helping planners reduce manual judgment and align allocation decisions.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section experience-section" id="experience">
+      <div class="section-heading compact">
+        <span class="section-kicker">Career Timeline</span>
+        <h2>Experience across warehouse execution and planning analytics.</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-date">Mar 2026 - Present</div>
+          <div class="timeline-content">
+            <h3>Warehouse Specialist</h3>
+            <p class="company">TITANICOM TECH (THAILAND) CO., LTD.</p>
+            <p>Manages IT server spare parts inventory from receiving to issuance, returns, stock counting, location control, and reconciliation between physical stock and records.</p>
+            <div class="tag-row">
+              <span>Spare Parts Control</span>
+              <span>Stock Accuracy</span>
+              <span>Location Planning</span>
             </div>
-        </header>
-    </div>
-
-    <main class="max-w-6xl mx-auto px-8 pb-32">
-        <!-- Summary Section -->
-        <section id="about" class="mb-32">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                <div class="lg:col-span-4">
-                    <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-accent">Professional Summary</h2>
-                </div>
-                <div class="lg:col-span-8">
-                    <p class="text-xl md:text-2xl text-navy leading-relaxed font-light">
-                        Data-driven warehouse and planning professional with experience in IT server spare parts control, inventory reporting, demand planning, and capacity planning. Skilled in Microsoft Excel (Advanced), Power Query, Excel VBA, and basic SQL to automate reports and improve operational visibility. 
-                    </p>
-                    <p class="mt-6 text-muted leading-relaxed">
-                        Proven success in reducing reporting time from 2 days to 1 hour and improving warehouse efficiency through data-based location planning. Seeking to grow in inventory planning, operations analysis, or data analytics roles.
-                    </p>
-                </div>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">Feb 2025 - Feb 2026</div>
+          <div class="timeline-content">
+            <h3>Capacity Planner</h3>
+            <p class="company">HANESBRANDS ROH ASIA LTD.</p>
+            <p>Built automated reporting and planning tools using Power Query, basic SQL, and Excel logic to improve budget, demand, and resource visibility.</p>
+            <div class="tag-row">
+              <span>Power Query</span>
+              <span>SQL</span>
+              <span>Dashboarding</span>
             </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="mb-32">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 border-t border-border pt-16">
-                <div>
-                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-navy/40 mb-6">Data Automation & Reporting</h3>
-                    <p class="text-sm text-muted font-medium leading-relaxed">
-                        Microsoft Excel (Advanced), Power Query, Excel VBA, Basic SQL, Data Cleaning, Dashboard Reporting, and KPI Tracking.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-navy/40 mb-6">Planning & Analytics</h3>
-                    <p class="text-sm text-muted font-medium leading-relaxed">
-                        Capacity Planning, Demand Planning, Inventory Optimization, Inventory Reporting, Sales Trend Forecasting, and Root Cause Analysis (RCA).
-                    </p>
-                </div>
-                <div>
-                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-navy/40 mb-6">Warehouse & Inventory Operations</h3>
-                    <p class="text-sm text-muted font-medium leading-relaxed">
-                        Warehouse Management, IT Server Spare Parts Control, Stock Reconciliation, FIFO, Stock Counting, Location Management, and Purchase Requisition (PR).
-                    </p>
-                </div>
-                <div>
-                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-navy/40 mb-6">Systems & Tools</h3>
-                    <p class="text-sm text-muted font-medium leading-relaxed">
-                        Microsoft Dynamics NAV, Inventory Records Maintenance, Process Standardization, and Operational Workflow Improvement.
-                    </p>
-                </div>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">Jun 2024 - Dec 2024</div>
+          <div class="timeline-content">
+            <h3>Demand Planner</h3>
+            <p class="company">HANESBRANDS ROH ASIA LTD.</p>
+            <p>Analyzed sales trends, monitored inventory thresholds, initiated production orders, and investigated order cancellations through root cause analysis.</p>
+            <div class="tag-row">
+              <span>Forecasting</span>
+              <span>Stockout Risk</span>
+              <span>RCA</span>
             </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="mb-32">
-            <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-accent mb-16">Work Experience</h2>
-            
-            <div class="space-y-12">
-                <!-- Titanicom -->
-                <div class="accordion-item relative pl-8 border-l border-border">
-                    <div class="timeline-dot"></div>
-                    <div class="accordion-header">
-                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-2 md:gap-4">
-                            <div class="lg:col-span-4">
-                                <span class="text-sm font-bold text-navy/40 uppercase tracking-widest">Mar 2026 - Present</span>
-                                <h3 class="text-lg md:text-xl font-bold text-navy mt-1">TITANICOM TECH (THAILAND) CO., LTD.</h3>
-                            </div>
-                            <div class="lg:col-span-8 flex items-center">
-                                <h4 class="text-md md:text-lg font-bold text-navy/70">Warehouse Specialist</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="lg:ml-[33.333%]">
-                            <ul class="space-y-4 text-muted leading-relaxed text-sm md:text-base">
-                                <li>• Managed end-to-end IT server spare parts inventory operations, including inbound receiving, outbound issuance, returns, stock counting, and inventory record reconciliation.</li>
-                                <li>• Analyzed spare parts movement data to classify items by usage frequency, identifying fast-moving parts, slow-moving parts, and dead stock for better storage planning.</li>
-                                <li>• Reorganized warehouse locations based on picking frequency to improve part accessibility, reduce walking distance, and support faster spare parts issuance.</li>
-                                <li>• Maintained stock accuracy through regular physical counts, location control, and reconciliation between actual inventory and warehouse records.</li>
-                                <li>• Prepared recurring inventory and operations reports to track stock movement, part usage, outstanding items, and warehouse performance indicators.</li>
-                                <li>• Standardized storage arrangement, spare parts handling, and inventory update processes to improve workflow consistency and operational accuracy.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hanes 1 -->
-                <div class="accordion-item relative pl-8 border-l border-border">
-                    <div class="timeline-dot bg-muted"></div>
-                    <div class="accordion-header">
-                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-2 md:gap-4">
-                            <div class="lg:col-span-4">
-                                <span class="text-sm font-bold text-navy/40 uppercase tracking-widest">Feb 2025 - Feb 2026</span>
-                                <h3 class="text-lg md:text-xl font-bold text-navy mt-1">HANESBRANDS ROH ASIA LTD.</h3>
-                            </div>
-                            <div class="lg:col-span-8 flex items-center">
-                                <h4 class="text-md md:text-lg font-bold text-navy/70">Capacity Planner</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="lg:ml-[33.333%]">
-                            <ul class="space-y-4 text-muted leading-relaxed text-sm md:text-base">
-                                <li>• Built an automated reporting pipeline using Power Query and basic SQL to extract and transform data, replacing manual workflows.</li>
-                                <li>• Developed a logic-based planning tool to balance Budget vs. Demand, supporting optimal resource allocation and reducing manual guesswork.</li>
-                                <li>• Reduced reporting cycle time from 2 days to 1 hour by engineering a refreshable dashboard solution.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hanes 2 -->
-                <div class="accordion-item relative pl-8 border-l border-border">
-                    <div class="timeline-dot bg-muted"></div>
-                    <div class="accordion-header">
-                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-2 md:gap-4">
-                            <div class="lg:col-span-4">
-                                <span class="text-sm font-bold text-navy/40 uppercase tracking-widest">June 2024 - Dec 2024</span>
-                                <h3 class="text-lg md:text-xl font-bold text-navy mt-1">HANESBRANDS ROH ASIA LTD.</h3>
-                            </div>
-                            <div class="lg:col-span-8 flex items-center">
-                                <h4 class="text-md md:text-lg font-bold text-navy/70">Demand Planner</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="lg:ml-[33.333%]">
-                            <ul class="space-y-4 text-muted leading-relaxed text-sm md:text-base">
-                                <li>• Analyzed sales trends using Excel Pivot Tables to forecast business needs and support demand planning decisions.</li>
-                                <li>• Monitored inventory levels and initiated production orders for styles below safety thresholds to reduce stockout risk.</li>
-                                <li>• Investigated order cancellations through Root Cause Analysis (RCA) to identify issues such as factory delays or warehouse discrepancies.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Maguro -->
-                <div class="accordion-item relative pl-8 border-l border-border">
-                    <div class="timeline-dot bg-muted"></div>
-                    <div class="accordion-header">
-                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-2 md:gap-4">
-                            <div class="lg:col-span-4">
-                                <span class="text-sm font-bold text-navy/40 uppercase tracking-widest">Aug 2023 - May 2024</span>
-                                <h3 class="text-lg md:text-xl font-bold text-navy mt-1">Maguro Group Public Company Limited</h3>
-                            </div>
-                            <div class="lg:col-span-8 flex items-center">
-                                <h4 class="text-md md:text-lg font-bold text-navy/70">Warehouse Internship</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="lg:ml-[33.333%]">
-                            <ul class="space-y-4 text-muted leading-relaxed text-sm md:text-base">
-                                <li>• Managed stock levels and processed Purchase Requisitions (PR) using Microsoft Dynamics NAV.</li>
-                                <li>• Calculated appropriate order quantities to prevent overstocking and minimize waste.</li>
-                                <li>• Maintained inventory accuracy through FIFO procedures, monthly stock counts, and inventory record updates.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">Aug 2023 - May 2024</div>
+          <div class="timeline-content">
+            <h3>Warehouse Internship</h3>
+            <p class="company">Maguro Group Public Company Limited</p>
+            <p>Supported purchase requisitions, order quantity decisions, FIFO procedures, monthly stock counts, and inventory records in Microsoft Dynamics NAV.</p>
+            <div class="tag-row">
+              <span>Dynamics NAV</span>
+              <span>FIFO</span>
+              <span>PR Control</span>
             </div>
-        </section>
+          </div>
+        </article>
+      </div>
+    </section>
 
-        <!-- Education Section -->
-        <section class="mb-32">
-            <div class="bg-slate p-8 md:p-12 rounded-2xl border border-border">
-                <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-accent mb-8">Education</h2>
-                <div class="flex flex-col md:flex-row justify-between items-start gap-6">
-                    <div>
-                        <h3 class="text-xl font-bold text-navy">Bachelor of Logistics and Supply Chain Management (First Class Honours)</h3>
-                        <p class="text-muted mt-1">Dhurakij Pundit University, College of Innovative Business and Accountancy (CIBA)</p>
-                        <p class="text-accent font-bold mt-2">GPA: 3.51</p>
-                    </div>
-                    <div class="text-sm font-bold text-navy/40 uppercase tracking-widest">2020 - 2024</div>
-                </div>
-            </div>
-        </section>
+    <section class="section education-section">
+      <div>
+        <span class="section-kicker">Education</span>
+        <h2>Bachelor of Logistics and Supply Chain Management</h2>
+      </div>
+      <div class="education-card">
+        <p>Dhurakij Pundit University, College of Innovative Business and Accountancy (CIBA)</p>
+        <strong>First Class Honours / GPA 3.51 / 2020 - 2024</strong>
+      </div>
+    </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="mb-32">
-            <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-accent mb-12">Selected Projects</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="project-card rounded-2xl overflow-hidden">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" alt="Excel Automation">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-lg font-bold text-navy mb-2">Excel Automation Project</h3>
-                        <p class="text-sm text-muted leading-relaxed">Developed a custom VBA tool to consolidate multi-source data into a single summary report, improving data integrity.</p>
-                    </div>
-                </div>
+    <section class="section project-section">
+      <div class="section-heading compact">
+        <span class="section-kicker">Portfolio Links</span>
+        <h2>Additional work and public experiments.</h2>
+      </div>
+      <div class="project-list">
+        <a href="https://peichh.github.io/shopthip-site/" target="_blank" rel="noopener noreferrer">
+          <span>ShopThip</span>
+          <strong>Modern shopping interface exercise</strong>
+        </a>
+        <a href="https://poke.com/r/k0bZXR5tyJw" target="_blank" rel="noopener noreferrer">
+          <span>Moo Pak Zap</span>
+          <strong>Daily Thai horoscope automation concept</strong>
+        </a>
+        <a href="https://github.com/peichh" target="_blank" rel="noopener noreferrer">
+          <span>GitHub</span>
+          <strong>Public repositories and experiments</strong>
+        </a>
+      </div>
+    </section>
 
-                <!-- Project 2 -->
-                <a href="https://peichh.github.io/shopthip-site/" target="_blank" class="project-card rounded-2xl overflow-hidden">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" alt="ShopThip">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-lg font-bold text-navy mb-2">ShopThip (ช็อปทิพย์)</h3>
-                        <p class="text-sm text-muted leading-relaxed">A modern frontend exercise building a simulated shopping experience for dopamine-driven browsing.</p>
-                    </div>
-                </a>
+    <section class="contact-section" id="contact">
+      <div>
+        <span class="section-kicker">Contact</span>
+        <h2>Looking for inventory planning, operations analysis, or data automation work.</h2>
+      </div>
+      <div class="contact-actions">
+        <a class="button primary" href="mailto:Theerapong.thana@outlook.com">Theerapong.thana@outlook.com</a>
+        <a class="button secondary" href="tel:+66808314717">+66 80 831 4717</a>
+      </div>
+    </section>
+  </main>
 
-                <!-- Project 3 -->
-                <a href="https://poke.com/r/k0bZXR5tyJw" target="_blank" class="project-card rounded-2xl overflow-hidden">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" alt="Moo Pak Zap">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-lg font-bold text-navy mb-2">Moo Pak Zap (มูปากแซ่บ)</h3>
-                        <p class="text-sm text-muted leading-relaxed">A lifestyle-focused automation project delivering daily Thai horoscope insights with a sharp, modern personality.</p>
-                    </div>
-                </a>
-            </div>
-        </section>
+  <footer class="footer">
+    <p>© 2026 Theerapong Thanarodpaibun. Built as a focused operations portfolio.</p>
+    <a href="#top">Back to top</a>
+  </footer>
 
-        <!-- Footer -->
-        <footer class="text-center">
-            <div class="flex justify-center gap-10 mb-12">
-                <a href="mailto:Theerapong.thana@outlook.com" class="text-xs font-bold uppercase tracking-widest text-navy hover:text-accent transition-colors">Outlook</a>
-                <a href="https://github.com/peichh" class="text-xs font-bold uppercase tracking-widest text-navy hover:text-accent transition-colors">GitHub</a>
-            </div>
-            <p class="text-[10px] uppercase tracking-[0.5em] text-navy/20">© 2026 THEERAPONG THANARODPAIBUN</p>
-        </footer>
-    </main>
-
-    <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href === '#') {
-                    e.preventDefault();
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                    return;
-                }
-                
-                const target = document.querySelector(href);
-                if (target) {
-                    e.preventDefault();
-                    const navHeight = document.querySelector('nav').offsetHeight;
-                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Accordion Logic
-        document.querySelectorAll('.accordion-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const item = header.parentElement;
-                const isActive = item.classList.contains('active');
-                
-                // Close all other items
-                document.querySelectorAll('.accordion-item').forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                    }
-                });
-                
-                // Toggle current item
-                item.classList.toggle('active');
-            });
-        });
-
-        // Open the first experience item by default
-        document.addEventListener('DOMContentLoaded', () => {
-            const firstItem = document.querySelector('.accordion-item');
-            if (firstItem) firstItem.classList.add('active');
-        });
-    </script>
+  <script src="script.js"></script>
 </body>
 </html>

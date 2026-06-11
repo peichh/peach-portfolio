@@ -1,0 +1,8 @@
+{
+  "name": "Theerapong Thanarodpaibun Portfolio",
+  "short_name": "Peach Portfolio",
+  "start_url": "/peach-portfolio/",
+  "display": "standalone",
+  "background_color": "#fbfbf8",
+  "theme_color": "#0f172a"
+}
