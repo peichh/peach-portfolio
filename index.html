@@ -61,7 +61,7 @@
         <div class="hero-actions" aria-label="Contact actions">
           <a class="button primary" href="mailto:Theerapong.thana@outlook.com" data-i18n="emailPeach">Email Peach</a>
           <a class="button secondary" href="tel:+66808314717">
-            <i class="fas fa-phone-alt" style="margin-right: 8px;"></i>
+            <i class="fas fa-phone-alt"></i>
             <span>+66 80 831 4717</span>
           </a>
         </div>
@@ -70,9 +70,9 @@
             <dt data-i18n="statOne">2 days to 1 hour</dt>
             <dd data-i18n="statOneDesc">reporting cycle reduced with refreshable analytics</dd>
           </div>
-          <div>
+          <div class="stat-highlight">
             <dt data-i18n="statKPI">100% Accuracy</dt>
-            <dd data-i18n="statKPIDesc">Inventory precision with discrepancies reduced to < 0.1%</dd>
+            <dd data-i18n="statKPIDesc">Inventory precision with discrepancies &lt; 0.1%</dd>
           </div>
           <div>
             <dt data-i18n="statThree">Bangkok</dt>
@@ -103,15 +103,15 @@
           <p>
             <span data-i18n="expertP1">Peach combines hands-on warehouse discipline with planning analytics. The profile is strongest where a team needs someone who understands physical stock movement, can diagnose data gaps, and can build simple tools that make daily decisions faster.</span>
           </p>
-          <div class="skill-badges">
-            <div class="skill-badge" title="Microsoft Excel"><i class="fas fa-file-excel"></i><span>Excel</span></div>
-            <div class="skill-badge" title="VBA Automation"><i class="fas fa-code"></i><span>VBA</span></div>
-            <div class="skill-badge" title="SQL Databases"><i class="fas fa-database"></i><span>SQL</span></div>
-            <div class="skill-badge" title="Power Query"><i class="fas fa-filter"></i><span>Power Query</span></div>
-            <div class="skill-badge" title="HTML5"><i class="fab fa-html5"></i><span>HTML</span></div>
-            <div class="skill-badge" title="CSS3"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
-            <div class="skill-badge" title="JavaScript"><i class="fab fa-js"></i><span>JS</span></div>
-            <div class="skill-badge" title="Tailwind CSS"><i class="fab fa-css3"></i><span>Tailwind</span></div>
+          <div class="skill-stack">
+            <div class="skill-tag"><i class="fas fa-file-excel"></i><span>Excel</span></div>
+            <div class="skill-tag"><i class="fas fa-code"></i><span>VBA</span></div>
+            <div class="skill-tag"><i class="fas fa-database"></i><span>SQL</span></div>
+            <div class="skill-tag"><i class="fas fa-filter"></i><span>Power Query</span></div>
+            <div class="skill-tag"><i class="fab fa-html5"></i><span>HTML</span></div>
+            <div class="skill-tag"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+            <div class="skill-tag"><i class="fab fa-js"></i><span>JS</span></div>
+            <div class="skill-tag"><i class="fab fa-css3"></i><span>Tailwind</span></div>
           </div>
         </div>
       </div>
@@ -328,15 +328,24 @@
     </section>
 
     <section class="contact-section" id="contact">
-      <div>
+      <div class="contact-header">
         <span class="section-kicker" data-i18n="contact">Contact</span>
-        <h2 data-i18n="contactTitle">Looking for inventory planning, operations analysis, or data automation work.</h2>
+        <h2 data-i18n="contactTitle">Ready for the next operation.</h2>
       </div>
-      <div class="contact-actions">
-        <a class="button primary" href="mailto:Theerapong.thana@outlook.com">Theerapong.thana@outlook.com</a>
-        <a class="button secondary featured-phone" href="tel:+66808314717">
-          <i class="fas fa-phone-alt"></i>
-          <span>+66 80 831 4717</span>
+      <div class="contact-grid">
+        <a href="mailto:Theerapong.thana@outlook.com" class="contact-card">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contact-info">
+            <span class="contact-label">Email</span>
+            <strong class="contact-value">Theerapong.thana@outlook.com</strong>
+          </div>
+        </a>
+        <a href="tel:+66808314717" class="contact-card highlight">
+          <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+          <div class="contact-info">
+            <span class="contact-label">Phone</span>
+            <strong class="contact-value">+66 80 831 4717</strong>
+          </div>
         </a>
       </div>
     </section>
