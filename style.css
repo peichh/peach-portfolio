@@ -142,8 +142,8 @@ a {
 
 .hero {
   display: grid;
-  gap: 48px;
-  grid-template-columns: minmax(0, 1.04fr) minmax(320px, 0.96fr);
+  gap: 58px;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
   margin: 0 auto;
   max-width: 1180px;
   min-height: calc(100vh - 75px);
@@ -175,11 +175,11 @@ p {
 }
 
 h1 {
-  font-size: 5.85rem;
+  font-size: 4.35rem;
   letter-spacing: 0;
-  line-height: 0.96;
+  line-height: 1.02;
   margin-bottom: 28px;
-  max-width: 920px;
+  max-width: 710px;
 }
 
 h1 span {
@@ -268,14 +268,14 @@ h3 {
 
 .hero-visual {
   align-self: center;
-  min-height: 620px;
+  min-height: 500px;
   overflow: hidden;
   position: relative;
 }
 
 .hero-visual img {
   height: 100%;
-  min-height: 620px;
+  min-height: 500px;
   object-fit: cover;
   width: 100%;
 }
@@ -660,7 +660,7 @@ h3 {
   }
 
   h1 {
-    font-size: 4.85rem;
+    font-size: 4.1rem;
   }
 
   h2 {
@@ -669,7 +669,7 @@ h3 {
 
   .hero-visual,
   .hero-visual img {
-    min-height: 420px;
+    min-height: 380px;
   }
 
   .case-card.featured {
@@ -733,7 +733,7 @@ h3 {
   }
 
   h1 {
-    font-size: 2.55rem;
+    font-size: 2.35rem;
     line-height: 1;
   }
 
