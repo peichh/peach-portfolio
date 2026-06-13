@@ -248,7 +248,6 @@ h3 {
   gap: 12px;
 }
 
-/* Base button styles with preservation of layout */
 .button {
   align-items: center;
   border: 1px solid var(--line);
@@ -259,7 +258,7 @@ h3 {
   min-height: 48px;
   padding: 13px 24px;
   text-align: center;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -278,11 +277,10 @@ h3 {
 .button:hover,
 .button:focus-visible {
   border-color: var(--blue);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
 }
 
-/* User-provided .btn-12 styles with mix-blend-mode: difference */
 .btn-12 {
   perspective: 500px;
 }
@@ -359,6 +357,7 @@ h3 {
   min-height: 500px;
   overflow: hidden;
   position: relative;
+  border-radius: var(--radius);
 }
 
 .hero-visual img {
@@ -366,6 +365,11 @@ h3 {
   min-height: 500px;
   object-fit: cover;
   width: 100%;
+  transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hero-visual:hover img {
+  transform: scale(1.05);
 }
 
 .signal-panel {
@@ -377,6 +381,7 @@ h3 {
   padding: 22px;
   position: absolute;
   right: 24px;
+  z-index: 2;
 }
 
 .signal-panel span {
@@ -428,13 +433,14 @@ h3 {
   font-weight: 700;
   padding: 6px 16px;
   border-radius: 99px;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .skill-pill:hover {
   background: var(--blue);
   color: #fff;
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.15);
 }
 
 .capability-grid {
@@ -449,6 +455,13 @@ h3 {
   padding: 40px;
   display: flex;
   flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.capability-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--blue);
+  box-shadow: var(--shadow);
 }
 
 .cap-header {
@@ -496,6 +509,11 @@ h3 {
   background: var(--soft-blue);
   padding: 32px;
   border-radius: var(--radius);
+  transition: all 0.4s ease;
+}
+
+.proof-card:hover {
+  transform: scale(1.02);
 }
 
 .proof-card.secondary { background: var(--soft-teal); }
@@ -533,6 +551,12 @@ h3 {
   flex-direction: column;
   min-width: 0;
   overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.case-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
 }
 
 .case-card.featured {
@@ -582,6 +606,11 @@ h3 {
   gap: 28px;
   grid-template-columns: minmax(180px, 0.28fr) minmax(320px, 0.72fr);
   padding: 34px 0;
+  transition: background 0.3s ease;
+}
+
+.timeline-item:hover {
+  background: rgba(37, 99, 235, 0.01);
 }
 
 .timeline-date {
@@ -636,6 +665,7 @@ h3 {
   background: var(--ink);
   color: #fff;
   padding: 30px;
+  border-radius: var(--radius);
 }
 
 .project-list {
@@ -650,6 +680,12 @@ h3 {
   grid-template-columns: minmax(160px, 0.3fr) minmax(280px, 0.7fr);
   min-width: 0;
   padding: 24px 0;
+  transition: all 0.3s ease;
+}
+
+.project-list a:hover {
+  padding-left: 16px;
+  color: var(--blue);
 }
 
 .project-list a span,
@@ -663,11 +699,11 @@ h3 {
 .contact-section {
   background: var(--navy);
   color: #fff;
-  padding: 100px 24px;
+  padding: 120px 24px;
 }
 
 .contact-header {
-  margin: 0 auto 64px;
+  margin: 0 auto 84px;
   max-width: 1180px;
   text-align: center;
 }
@@ -676,65 +712,49 @@ h3 {
   color: #8ee6d8;
 }
 
-.contact-grid {
-  display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 0 auto;
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
   max-width: 900px;
+  margin: 0 auto;
 }
 
-.contact-card {
-  align-items: center;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.contact-link-item {
+  width: 100%;
   display: flex;
-  gap: 24px;
-  padding: 32px;
-  transition: all 0.3s ease;
-}
-
-.contact-card.highlight {
-  background: rgba(142, 230, 216, 0.08);
-  border-color: rgba(142, 230, 216, 0.2);
-}
-
-.contact-icon {
+  justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   color: #fff;
-  display: flex;
-  font-size: 1.5rem;
-  height: 64px;
-  justify-content: center;
-  width: 64px;
+  text-decoration: none;
 }
 
-.contact-card.highlight .contact-icon {
-  background: #0f766e;
+.contact-link-item:hover {
+  padding-left: 24px;
+  border-bottom-color: #8ee6d8;
 }
 
-.contact-label {
-  color: rgba(255, 255, 255, 0.5);
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  margin-bottom: 8px;
-  text-transform: uppercase;
+.contact-link-text {
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
 }
 
-.contact-value {
-  display: block;
-  font-size: 1.25rem;
-  overflow-wrap: anywhere;
-  word-break: break-word;
+.contact-link-item i {
+  font-size: 1.4rem;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.4s ease;
 }
 
-.contact-card:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+.contact-link-item:hover i {
+  opacity: 1;
+  transform: translateX(0);
+  color: #8ee6d8;
 }
 
 .footer {
@@ -749,7 +769,7 @@ h3 {
 }
 
 @media (max-width: 940px) {
-  .hero, .intro-grid, .section-heading, .education-section, .contact-grid, .capability-grid {
+  .hero, .intro-grid, .section-heading, .education-section, .capability-grid {
     grid-template-columns: 1fr;
   }
   h1 { font-size: 3.5rem; }
@@ -770,6 +790,7 @@ h3 {
     min-height: 0;
   }
   .case-content { padding: 28px; }
+  .contact-link-text { font-size: 1.35rem; }
 }
 
 @media (max-width: 720px) {
@@ -795,13 +816,8 @@ h3 {
   h1 { font-size: 2.35rem; }
   h2 { font-size: 2.1rem; }
   .hero-stats, .proof-strip, .case-grid, .timeline-item { grid-template-columns: 1fr; }
-  .contact-card {
-    padding: 24px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .contact-value { font-size: 1.1rem; }
   .case-content {
     padding: 24px;
   }
+  .contact-link-text { font-size: 1.1rem; }
 }
