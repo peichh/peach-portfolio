@@ -245,7 +245,7 @@ h3 {
 .contact-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 16px;
 }
 
 .button {
@@ -255,8 +255,9 @@ h3 {
   font-size: 0.88rem;
   font-weight: 800;
   justify-content: center;
-  min-height: 48px;
-  padding: 13px 24px;
+  min-height: 52px;
+  min-width: 200px;
+  padding: 13px 40px;
   text-align: center;
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
@@ -296,19 +297,19 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 24px;
+  padding: 0 40px;
 }
 
 .btn-12 span:nth-child(1) {
   background: var(--blue);
   color: #fff;
   transform: rotateX(90deg);
-  transform-origin: 50% 50% -24px;
+  transform-origin: 50% 50% -26px;
 }
 
 .btn-12 span:nth-child(2) {
   transform: rotateX(0deg);
-  transform-origin: 50% 50% -24px;
+  transform-origin: 50% 50% -26px;
   mix-blend-mode: difference;
 }
 
@@ -716,26 +717,28 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 0;
   max-width: 900px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .contact-link-item {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  width: auto;
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
-  padding: 32px 0;
+  padding: 24px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   color: #fff;
   text-decoration: none;
+  gap: 16px;
 }
 
 .contact-link-item:hover {
-  padding-left: 24px;
   border-bottom-color: #8ee6d8;
+  color: #8ee6d8;
 }
 
 .contact-link-text {
@@ -745,16 +748,14 @@ h3 {
 }
 
 .contact-link-item i {
-  font-size: 1.4rem;
-  opacity: 0;
-  transform: translateX(-30px);
+  font-size: 1.2rem;
+  opacity: 0.4;
   transition: all 0.4s ease;
 }
 
 .contact-link-item:hover i {
   opacity: 1;
-  transform: translateX(0);
-  color: #8ee6d8;
+  transform: translateX(8px);
 }
 
 .footer {
@@ -791,6 +792,7 @@ h3 {
   }
   .case-content { padding: 28px; }
   .contact-link-text { font-size: 1.35rem; }
+  .button { min-width: 100%; }
 }
 
 @media (max-width: 720px) {
