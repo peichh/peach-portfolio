@@ -205,8 +205,7 @@ a {
 
 h1,
 h2,
-h3,
-p {
+h3, p {
   margin-top: 0;
 }
 
@@ -249,6 +248,7 @@ h3 {
   gap: 12px;
 }
 
+/* Base button styles with preservation of layout */
 .button {
   align-items: center;
   border: 1px solid var(--line);
@@ -260,6 +260,9 @@ h3 {
   padding: 13px 24px;
   text-align: center;
   transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .button.primary {
@@ -277,6 +280,46 @@ h3 {
   border-color: var(--blue);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* User-provided .btn-12 styles with mix-blend-mode: difference */
+.btn-12 {
+  perspective: 500px;
+}
+
+.btn-12 span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.btn-12 span:nth-child(1) {
+  background: var(--blue);
+  color: #fff;
+  transform: rotateX(90deg);
+  transform-origin: 50% 50% -24px;
+}
+
+.btn-12 span:nth-child(2) {
+  transform: rotateX(0deg);
+  transform-origin: 50% 50% -24px;
+  mix-blend-mode: difference;
+}
+
+.btn-12:hover span:nth-child(1) {
+  transform: rotateX(0deg);
+}
+
+.btn-12:hover span:nth-child(2) {
+  transform: rotateX(-90deg);
 }
 
 .hero-stats {
