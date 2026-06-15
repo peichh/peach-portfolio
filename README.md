@@ -6,7 +6,7 @@ Live site: https://peichh.github.io/peach-portfolio/
 
 ## What this is
 
-This is a static GitHub Pages portfolio positioned for inventory planning, warehouse operations, and operations data roles. It is intentionally lightweight: no build step, no framework, and no package install required.
+This is a modern Next.js portfolio positioned for inventory planning, warehouse operations, and operations data roles.
 
 ## Sections
 
@@ -20,29 +20,33 @@ This is a static GitHub Pages portfolio positioned for inventory planning, wareh
 
 ## Tech
 
-- HTML
-- CSS
-- Vanilla JavaScript
-- GitHub Pages
+- Next.js 14
+- React
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+- GitHub Actions (for deployment)
 
-## Local preview
+## Local development
 
-Open `index.html` directly in a browser, or run a tiny local server:
+Install dependencies and run the development server:
 
 ```bash
-python3 -m http.server 8000
+npm install
+npm run dev
 ```
 
 Then visit:
 
 ```text
-http://localhost:8000/
+http://localhost:3000/
 ```
 
 ## Publishing
 
-GitHub Pages serves this repository from the existing `main` branch. Pushing updates to `main` keeps the same public URL:
+GitHub Pages serves this repository via GitHub Actions. Pushing updates to the `main` branch triggers the `nextjs.yml` workflow, which builds and deploys the static export.
 
+Live URL:
 ```text
 https://peichh.github.io/peach-portfolio/
 ```
