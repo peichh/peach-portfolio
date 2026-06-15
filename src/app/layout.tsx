@@ -17,6 +17,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Theerapong Thanarodpaibun | Operations Data Portfolio",
   description: "Portfolio of Theerapong Thanarodpaibun, an inventory, planning, and operations data specialist in Bangkok.",
+  themeColor: "#0f172a",
   openGraph: {
     type: "website",
     title: "Theerapong Thanarodpaibun | Inventory & Planning Specialist",

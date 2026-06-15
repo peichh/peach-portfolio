@@ -146,6 +146,7 @@ const translations = {
     heroTitleFirst: "Theerapong",
     heroTitleLast: "Thanarodpaibun",
     heroDescription: "ผมเปลี่ยนงานคลังสินค้า ข้อมูลสต็อก และข้อมูลวางแผน ให้กลายเป็นระบบทำงานที่ใช้ได้จริง: dashboard ชัดขึ้น, report เร็วขึ้น, ตัดสินใจเรื่อง stock ได้คมขึ้น และทีมทำซ้ำได้อย่างเป็นระบบ",
+    heroDescription: "ผมเปลี่ยนงานคลังสินค้า ข้อมูลสต็อก และข้อมูลวางแผน ให้กลายเป็นระบบทำงานที่ใช้ได้จริง: dashboard ชัดขึ้น, report เร็วขึ้น, ตัดสินใจเรื่อง stock ได้คมขึ้น และทีมทำซ้ำได้อย่างเป็นระบบ",
     heroContact: "อีเมลหา Peach",
     heroViewProjects: "ดูผลงาน",
     statOne: "2 วัน → 1 ชม.",
